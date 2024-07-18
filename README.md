@@ -40,7 +40,7 @@ go mod tidy
 If your project already uses CometBFT and you want to replace it with WasmBFT, add the following replace directive to your `go.mod` file:
 
 ```plaintext
-replace github.com/cometbft/cometbft => github.com/airchains-network/wasmbft v0.0.1
+replace github.com/airchains-network/wasmbft => github.com/airchains-network/wasmbft v0.0.1
 ```
 
 Then run:

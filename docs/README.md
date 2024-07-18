@@ -20,7 +20,7 @@ For more background, see [What is CometBFT?](./introduction/README.md#what-is-co
 
 To get started quickly with an example application, see the [quick start guide](guides/quick-start.md).
 
-To learn about application development on CometBFT, see the [Application Blockchain Interface](https://github.com/cometbft/cometbft/tree/v0.38.x/spec/abci).
+To learn about application development on CometBFT, see the [Application Blockchain Interface](https://github.com/airchains-network/wasmbft/tree/v0.38.x/spec/abci).
 
 For more details on using CometBFT, see the respective documentation for
 [CometBFT internals](core/), [benchmarking and monitoring](tools/), and [network deployments](networks/).
@@ -40,4 +40,4 @@ Changes to the documentation will be reviewed by the team and, if accepted and
 merged, published to <https://docs.cometbft.com> for the respective version(s).
 
 The build process for the documentation is housed in the [CometBFT documentation
-repository](https://github.com/cometbft/cometbft-docs).
+repository](https://github.com/airchains-network/wasmbft-docs).

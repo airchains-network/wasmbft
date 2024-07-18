@@ -13,11 +13,11 @@ Also fixes a small bug in the mempool for an experimental feature.
 
 - `[mempool]` Avoid infinite wait in transaction sending routine when
   using experimental parameters to limiting transaction gossiping to peers
-  ([\#1654](https://github.com/cometbft/cometbft/pull/1654))
+  ([\#1654](https://github.com/airchains-network/wasmbft/pull/1654))
 
 ### FEATURES
 
-- `[mempool]` Add `nop` mempool ([\#1643](https://github.com/cometbft/cometbft/pull/1643))
+- `[mempool]` Add `nop` mempool ([\#1643](https://github.com/airchains-network/wasmbft/pull/1643))
 
   If you want to use it, change mempool's `type` to `nop`:
 
@@ -46,24 +46,24 @@ gossip.
 ### BUG FIXES
 
 - `[state/indexer]` Respect both height params while querying for events
-   ([\#1529](https://github.com/cometbft/cometbft/pull/1529))
+   ([\#1529](https://github.com/airchains-network/wasmbft/pull/1529))
 
 ### FEATURES
 
 - `[metrics]` Add metric for mempool size in bytes `SizeBytes`.
-  ([\#1512](https://github.com/cometbft/cometbft/pull/1512))
+  ([\#1512](https://github.com/airchains-network/wasmbft/pull/1512))
 
 ### IMPROVEMENTS
 
 - `[mempool]` Add experimental feature to limit the number of persistent peers and non-persistent
   peers to which the node gossip transactions.
-  ([\#1558](https://github.com/cometbft/cometbft/pull/1558))
-  ([\#1584](https://github.com/cometbft/cometbft/pull/1584))
+  ([\#1558](https://github.com/airchains-network/wasmbft/pull/1558))
+  ([\#1584](https://github.com/airchains-network/wasmbft/pull/1584))
 - `[config]` Add mempool parameters `experimental_max_gossip_connections_to_persistent_peers` and
   `experimental_max_gossip_connections_to_non_persistent_peers` for limiting the number of peers to
-  which the node gossip transactions. 
-  ([\#1558](https://github.com/cometbft/cometbft/pull/1558))
-  ([\#1584](https://github.com/cometbft/cometbft/pull/1584))
+  which the node gossip transactions.
+  ([\#1558](https://github.com/airchains-network/wasmbft/pull/1558))
+  ([\#1584](https://github.com/airchains-network/wasmbft/pull/1584))
 
 ## v0.38.0
 
@@ -84,25 +84,25 @@ See the [specification](./spec/abci/) for more details on ABCI 2.0.
 ### BREAKING CHANGES
 
 - `[mempool]` Remove priority mempool.
-  ([\#260](https://github.com/cometbft/cometbft/issues/260))
+  ([\#260](https://github.com/airchains-network/wasmbft/issues/260))
 - `[config]` Remove `Version` field from `MempoolConfig`.
-  ([\#260](https://github.com/cometbft/cometbft/issues/260))
+  ([\#260](https://github.com/airchains-network/wasmbft/issues/260))
 - `[protobuf]` Remove fields `sender`, `priority`, and `mempool_error` from
-  `ResponseCheckTx`. ([\#260](https://github.com/cometbft/cometbft/issues/260))
+  `ResponseCheckTx`. ([\#260](https://github.com/airchains-network/wasmbft/issues/260))
 - `[crypto/merkle]` Do not allow verification of Merkle Proofs against empty trees (`nil` root). `Proof.ComputeRootHash` now panics when it encounters an error, but `Proof.Verify` does not panic
-  ([\#558](https://github.com/cometbft/cometbft/issues/558))
+  ([\#558](https://github.com/airchains-network/wasmbft/issues/558))
 - `[state/kvindexer]` Remove the function type from the event key stored in the database. This should be breaking only
 for people who forked CometBFT and interact directly with the indexers kvstore.
-  ([\#774](https://github.com/cometbft/cometbft/pull/774))
+  ([\#774](https://github.com/airchains-network/wasmbft/pull/774))
 - `[rpc]` Removed `begin_block_events` and `end_block_events` from `BlockResultsResponse`.
   The events are merged into one field called `finalize_block_events`.
   ([\#9427](https://github.com/tendermint/tendermint/issues/9427))
 - `[pubsub]` Added support for big integers and big floats in the pubsub event query system.
   Breaking changes: function `Number` in package `libs/pubsub/query/syntax` changed its return value.
-  ([\#797](https://github.com/cometbft/cometbft/pull/797))
+  ([\#797](https://github.com/airchains-network/wasmbft/pull/797))
 - `[kvindexer]` Added support for big integers and big floats in the kvindexer.
   Breaking changes: function `Number` in package `libs/pubsub/query/syntax` changed its return value.
-  ([\#797](https://github.com/cometbft/cometbft/pull/797))
+  ([\#797](https://github.com/airchains-network/wasmbft/pull/797))
 - `[mempool]` Application can now set `ConsensusParams.Block.MaxBytes` to -1
   to have visibility on all transactions in the
   mempool at `PrepareProposal` time.
@@ -111,19 +111,19 @@ for people who forked CometBFT and interact directly with the indexers kvstore.
   If that is the case, the application MUST make sure that the total size of transactions
   returned in `ResponsePrepareProposal.txs` does not exceed `RequestPrepareProposal.max_tx_bytes`,
   otherwise CometBFT will panic.
-  ([\#980](https://github.com/cometbft/cometbft/issues/980))
+  ([\#980](https://github.com/airchains-network/wasmbft/issues/980))
 - `[node/state]` Add Go API to bootstrap block store and state store to a height. Make sure block sync starts syncing from bootstrapped height.
   ([\#1057](https://github.com/tendermint/tendermint/pull/#1057)) (@yihuang)
 - `[state/store]` Added Go functions to save height at which offline state sync is performed.
   ([\#1057](https://github.com/tendermint/tendermint/pull/#1057)) (@jmalicevic)
 - `[p2p]` Remove UPnP functionality
-  ([\#1113](https://github.com/cometbft/cometbft/issues/1113))
+  ([\#1113](https://github.com/airchains-network/wasmbft/issues/1113))
 - `[node]` Removed `ConsensusState()` accessor from `Node`
   struct - all access to consensus state should go via the reactor
-  ([\#1120](https://github.com/cometbft/cometbft/pull/1120))
+  ([\#1120](https://github.com/airchains-network/wasmbft/pull/1120))
 - `[state]` Signature of `ExtendVote` changed in `BlockExecutor`.
   It now includes the block whose precommit will be extended, an the state object.
-  ([\#1270](https://github.com/cometbft/cometbft/pull/1270))
+  ([\#1270](https://github.com/airchains-network/wasmbft/pull/1270))
 - `[state]` Move pruneBlocks from node/state to state/execution.
   ([\#6541](https://github.com/tendermint/tendermint/pull/6541))
 - `[abci]` Move `app_hash` parameter from `Commit` to `FinalizeBlock`
@@ -148,23 +148,23 @@ for people who forked CometBFT and interact directly with the indexers kvstore.
 ### BUG FIXES
 
 - `[kvindexer]` Forward porting the fixes done to the kvindexer in 0.37 in PR \#77
-  ([\#423](https://github.com/cometbft/cometbft/pull/423))
+  ([\#423](https://github.com/airchains-network/wasmbft/pull/423))
 - `[consensus]` Unexpected error conditions in `ApplyBlock` are non-recoverable, so ignoring the error and carrying on is a bug. We replaced a `return` that disregarded the error by a `panic`.
-  ([\#496](https://github.com/cometbft/cometbft/pull/496))
+  ([\#496](https://github.com/airchains-network/wasmbft/pull/496))
 - `[consensus]` Rename `(*PeerState).ToJSON` to `MarshalJSON` to fix a logging data race
-  ([\#524](https://github.com/cometbft/cometbft/pull/524))
+  ([\#524](https://github.com/airchains-network/wasmbft/pull/524))
 - `[light]` Fixed an edge case where a light client would panic when attempting
   to query a node that (1) has started from a non-zero height and (2) does
   not yet have any data. The light client will now, correctly, not panic
   _and_ keep the node in its list of providers in the same way it would if
   it queried a node starting from height zero that does not yet have data
-  ([\#575](https://github.com/cometbft/cometbft/issues/575))
+  ([\#575](https://github.com/airchains-network/wasmbft/issues/575))
 - `[abci]` Restore the snake_case naming in JSON serialization of
-  `ExecTxResult` ([\#855](https://github.com/cometbft/cometbft/issues/855)).
+  `ExecTxResult` ([\#855](https://github.com/airchains-network/wasmbft/issues/855)).
 - `[consensus]` Avoid recursive call after rename to (*PeerState).MarshalJSON
-  ([\#863](https://github.com/cometbft/cometbft/pull/863))
+  ([\#863](https://github.com/airchains-network/wasmbft/pull/863))
 - `[mempool/clist_mempool]` Prevent a transaction to appear twice in the mempool
-  ([\#890](https://github.com/cometbft/cometbft/pull/890): @otrack)
+  ([\#890](https://github.com/airchains-network/wasmbft/pull/890): @otrack)
 - `[docker]` Ensure Docker image uses consistent version of Go.
   ([\#9462](https://github.com/tendermint/tendermint/pull/9462))
 - `[abci-cli]` Fix broken abci-cli help command.
@@ -174,8 +174,8 @@ for people who forked CometBFT and interact directly with the indexers kvstore.
 
 - `[rpc/grpc]` Mark the gRPC broadcast API as deprecated.
   It will be superseded by a broader API as part of
-  [\#81](https://github.com/cometbft/cometbft/issues/81)
-  ([\#650](https://github.com/cometbft/cometbft/issues/650))
+  [\#81](https://github.com/airchains-network/wasmbft/issues/81)
+  ([\#650](https://github.com/airchains-network/wasmbft/issues/650))
 
 ### FEATURES
 
@@ -185,7 +185,7 @@ for people who forked CometBFT and interact directly with the indexers kvstore.
   clients to have the same concurrency model as remote clients (i.e. one mutex
   per client "connection", for each of the four ABCI "connections").
   ([tendermint/tendermint\#9830](https://github.com/tendermint/tendermint/pull/9830)
-  and [\#1145](https://github.com/cometbft/cometbft/pull/1145))
+  and [\#1145](https://github.com/airchains-network/wasmbft/pull/1145))
 - `[proxy]` Introduce `NewUnsyncLocalClientCreator`, which allows local ABCI
   clients to have the same concurrency model as remote clients (i.e. one
   mutex per client "connection", for each of the four ABCI "connections").
@@ -195,25 +195,25 @@ for people who forked CometBFT and interact directly with the indexers kvstore.
 ### IMPROVEMENTS
 
 - `[blocksync]` Generate new metrics during BlockSync
-  ([\#543](https://github.com/cometbft/cometbft/pull/543))
+  ([\#543](https://github.com/airchains-network/wasmbft/pull/543))
 - `[jsonrpc/client]` Improve the error message for client errors stemming from
   bad HTTP responses.
-  ([cometbft/cometbft\#638](https://github.com/cometbft/cometbft/pull/638))
+  ([cometbft/cometbft\#638](https://github.com/airchains-network/wasmbft/pull/638))
 - `[rpc]` Remove response data from response failure logs in order
   to prevent large quantities of log data from being produced
-  ([\#654](https://github.com/cometbft/cometbft/issues/654))
+  ([\#654](https://github.com/airchains-network/wasmbft/issues/654))
 - `[pubsub/kvindexer]` Numeric query conditions and event values are represented as big floats with default precision of 125.
   Integers are read as "big ints" and represented with as many bits as they need when converting to floats.
-  ([\#797](https://github.com/cometbft/cometbft/pull/797))
-- `[node]` Make handshake cancelable ([cometbft/cometbft\#857](https://github.com/cometbft/cometbft/pull/857))
+  ([\#797](https://github.com/airchains-network/wasmbft/pull/797))
+- `[node]` Make handshake cancelable ([cometbft/cometbft\#857](https://github.com/airchains-network/wasmbft/pull/857))
 - `[mempool]` Application can now set `ConsensusParams.Block.MaxBytes` to -1
   to gain more control on the max size of transactions in a block.
   It also allows the application to have visibility on all transactions in the
   mempool at `PrepareProposal` time.
-  ([\#980](https://github.com/cometbft/cometbft/pull/980))
-- `[node]` Close evidence.db OnStop ([cometbft/cometbft\#1210](https://github.com/cometbft/cometbft/pull/1210): @chillyvee)
+  ([\#980](https://github.com/airchains-network/wasmbft/pull/980))
+- `[node]` Close evidence.db OnStop ([cometbft/cometbft\#1210](https://github.com/airchains-network/wasmbft/pull/1210): @chillyvee)
 - `[state]` Make logging `block_app_hash` and `app_hash` consistent by logging them both as hex.
-  ([\#1264](https://github.com/cometbft/cometbft/pull/1264))
+  ([\#1264](https://github.com/airchains-network/wasmbft/pull/1264))
 - `[crypto/merkle]` Improve HashAlternatives performance
   ([\#6443](https://github.com/tendermint/tendermint/pull/6443))
 - `[p2p/pex]` Improve addrBook.hash performance
@@ -236,7 +236,7 @@ only become available in the next major release with ABCI 2.0. See the
 
 In the v0.34.27 release, the CometBFT Go module is still
 `github.com/tendermint/tendermint` to facilitate ease of upgrading for users,
-but in this release we have changed this to `github.com/cometbft/cometbft`.
+but in this release we have changed this to `github.com/airchains-network/wasmbft`.
 
 Please also see our [upgrading guidelines](./UPGRADING.md) for more details on
 upgrading from the v0.34 release series.
@@ -246,7 +246,7 @@ the v0.37 release.
 
 We'd love your feedback on this release! Please reach out to us via one of our
 communication channels, such as [GitHub
-Discussions](https://github.com/cometbft/cometbft/discussions), with any of your
+Discussions](https://github.com/airchains-network/wasmbft/discussions), with any of your
 questions, comments and/or concerns.
 
 See below for more details.
@@ -254,13 +254,13 @@ See below for more details.
 ### BREAKING CHANGES
 
 - The `TMHOME` environment variable was renamed to `CMTHOME`, and all environment variables starting with `TM_` are instead prefixed with `CMT_`
-  ([\#211](https://github.com/cometbft/cometbft/issues/211))
+  ([\#211](https://github.com/airchains-network/wasmbft/issues/211))
 - `[p2p]` Reactor `Send`, `TrySend` and `Receive` renamed to `SendEnvelope`,
   `TrySendEnvelope` and `ReceiveEnvelope` to allow metrics to be appended to
   messages and measure bytes sent/received.
-  ([\#230](https://github.com/cometbft/cometbft/pull/230))
+  ([\#230](https://github.com/airchains-network/wasmbft/pull/230))
 - Bump minimum Go version to 1.20
-  ([\#385](https://github.com/cometbft/cometbft/issues/385))
+  ([\#385](https://github.com/airchains-network/wasmbft/issues/385))
 - `[abci]` Make length delimiter encoding consistent
   (`uint64`) between ABCI and P2P wire-level protocols
   ([\#5783](https://github.com/tendermint/tendermint/pull/5783))
@@ -308,12 +308,12 @@ See below for more details.
 - `[state/kvindexer]` Fixed the default behaviour of the kvindexer to index and
   query attributes by events in which they occur. In 0.34.25 this was mitigated
   by a separated RPC flag. @jmalicevic
-  ([\#77](https://github.com/cometbft/cometbft/pull/77))
+  ([\#77](https://github.com/airchains-network/wasmbft/pull/77))
 - `[state/kvindexer]` Resolved crashes when event values contained slashes,
   introduced after adding event sequences in
-  [\#77](https://github.com/cometbft/cometbft/pull/77). @jmalicevic
-  ([\#382](https://github.com/cometbft/cometbft/pull/382))
-- `[consensus]` ([\#386](https://github.com/cometbft/cometbft/pull/386)) Short-term fix for the case when `needProofBlock` cannot find previous block meta by defaulting to the creation of a new proof block. (@adizere)
+  [\#77](https://github.com/airchains-network/wasmbft/pull/77). @jmalicevic
+  ([\#382](https://github.com/airchains-network/wasmbft/pull/382))
+- `[consensus]` ([\#386](https://github.com/airchains-network/wasmbft/pull/386)) Short-term fix for the case when `needProofBlock` cannot find previous block meta by defaulting to the creation of a new proof block. (@adizere)
   - Special thanks to the [Vega.xyz](https://vega.xyz/) team, and in particular to Zohar (@ze97286), for reporting the problem and working with us to get to a fix.
 - `[docker]` enable cross platform build using docker buildx
   ([\#9073](https://github.com/tendermint/tendermint/pull/9073))
@@ -339,11 +339,11 @@ See below for more details.
 - `[e2e]` Add functionality for uncoordinated (minor) upgrades
   ([\#56](https://github.com/tendermint/tendermint/pull/56))
 - `[tools/tm-signer-harness]` Remove the folder as it is unused
-  ([\#136](https://github.com/cometbft/cometbft/issues/136))
+  ([\#136](https://github.com/airchains-network/wasmbft/issues/136))
 - `[p2p]` Reactor `Send`, `TrySend` and `Receive` renamed to `SendEnvelope`,
   `TrySendEnvelope` and `ReceiveEnvelope` to allow metrics to be appended to
   messages and measure bytes sent/received.
-  ([\#230](https://github.com/cometbft/cometbft/pull/230))
+  ([\#230](https://github.com/airchains-network/wasmbft/pull/230))
 - `[abci]` Added `AbciVersion` to `RequestInfo` allowing
   applications to check ABCI version when connecting to CometBFT.
   ([\#5706](https://github.com/tendermint/tendermint/pull/5706))
@@ -375,7 +375,7 @@ our [upgrading guidelines](./UPGRADING.md).
 
 If you have any questions, comments, concerns or feedback on this release, we
 would love to hear from you! Please contact us via [GitHub
-Discussions](https://github.com/cometbft/cometbft/discussions),
+Discussions](https://github.com/airchains-network/wasmbft/discussions),
 [Discord](https://discord.gg/cosmosnetwork) (in the `#cometbft` channel) or
 [Telegram](https://t.me/CometBFT).
 
@@ -385,12 +385,12 @@ to this release!
 ### BREAKING CHANGES
 
 - Rename binary to `cometbft` and Docker image to `cometbft/cometbft`
-  ([\#152](https://github.com/cometbft/cometbft/pull/152))
+  ([\#152](https://github.com/airchains-network/wasmbft/pull/152))
 - The `TMHOME` environment variable was renamed to `CMTHOME`, and all
   environment variables starting with `TM_` are instead prefixed with `CMT_`
-  ([\#211](https://github.com/cometbft/cometbft/issues/211))
+  ([\#211](https://github.com/airchains-network/wasmbft/issues/211))
 - Use Go 1.19 to build CometBFT, since Go 1.18 has reached end-of-life.
-  ([\#360](https://github.com/cometbft/cometbft/issues/360))
+  ([\#360](https://github.com/airchains-network/wasmbft/issues/360))
 
 ### BUG FIXES
 
@@ -399,10 +399,10 @@ to this release!
   ([\#4](https://github.com/informalsystems/tendermint/pull/4))
 - `[state/kvindexer]` Resolved crashes when event values contained slashes,
   introduced after adding event sequences.
-  (\#[383](https://github.com/cometbft/cometbft/pull/383): @jmalicevic)
+  (\#[383](https://github.com/airchains-network/wasmbft/pull/383): @jmalicevic)
 - `[consensus]` Short-term fix for the case when `needProofBlock` cannot find
   previous block meta by defaulting to the creation of a new proof block.
-  ([\#386](https://github.com/cometbft/cometbft/pull/386): @adizere)
+  ([\#386](https://github.com/airchains-network/wasmbft/pull/386): @adizere)
   - Special thanks to the [Vega.xyz](https://vega.xyz/) team, and in particular
     to Zohar (@ze97286), for reporting the problem and working with us to get to
     a fix.
@@ -416,9 +416,9 @@ to this release!
 
 - Replace [tm-db](https://github.com/tendermint/tm-db) with
   [cometbft-db](https://github.com/cometbft/cometbft-db)
-  ([\#160](https://github.com/cometbft/cometbft/pull/160))
+  ([\#160](https://github.com/airchains-network/wasmbft/pull/160))
 - Bump tm-load-test to v1.3.0 to remove implicit dependency on Tendermint Core
-  ([\#165](https://github.com/cometbft/cometbft/pull/165))
+  ([\#165](https://github.com/airchains-network/wasmbft/pull/165))
 - `[crypto]` Update to use btcec v2 and the latest btcutil
   ([tendermint/tendermint\#9787](https://github.com/tendermint/tendermint/pull/9787):
   @wcsiu)
@@ -434,12 +434,12 @@ to this release!
 - `[e2e]` Add functionality for uncoordinated (minor) upgrades
   ([\#56](https://github.com/tendermint/tendermint/pull/56))
 - `[tools/tm-signer-harness]` Remove the folder as it is unused
-  ([\#136](https://github.com/cometbft/cometbft/issues/136))
+  ([\#136](https://github.com/airchains-network/wasmbft/issues/136))
 - Append the commit hash to the version of CometBFT being built
-  ([\#204](https://github.com/cometbft/cometbft/pull/204))
+  ([\#204](https://github.com/airchains-network/wasmbft/pull/204))
 - `[mempool/v1]` Suppress "rejected bad transaction" in priority mempool logs by
   reducing log level from info to debug
-  ([\#314](https://github.com/cometbft/cometbft/pull/314): @JayT106)
+  ([\#314](https://github.com/airchains-network/wasmbft/pull/314): @JayT106)
 - `[consensus]` Add `consensus_block_gossip_parts_received` and
   `consensus_step_duration_seconds` metrics in order to aid in investigating the
   impact of database compaction on consensus performance

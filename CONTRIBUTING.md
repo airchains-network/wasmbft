@@ -9,14 +9,14 @@ CometBFT project or a potential fork. When targeting the main CometBFT project,
 the following process leads to the best chance of landing changes in `main`.
 
 All work on the code base should be motivated by a [GitHub
-Issue](https://github.com/cometbft/cometbft/issues).
-[Search](https://github.com/cometbft/cometbft/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+Issue](https://github.com/airchains-network/wasmbft/issues).
+[Search](https://github.com/airchains-network/wasmbft/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 is a good place to start when looking for places to contribute. If you would
 like to work on an issue which already exists, please indicate so by leaving a
 comment.
 
 All new contributions should start with a [GitHub
-Issue](https://github.com/cometbft/cometbft/issues/new/choose). The issue helps
+Issue](https://github.com/airchains-network/wasmbft/issues/new/choose). The issue helps
 capture the problem you're trying to solve and allows for early feedback. Once
 the issue is created the process can proceed in different directions depending
 on how well defined the problem and potential solution are. If the change is
@@ -25,7 +25,7 @@ heartfelt emoji.
 
 If the issue would benefit from thorough discussion, maintainers may request
 that you create a [Request For
-Comment](https://github.com/cometbft/cometbft/tree/main/docs/rfc) in the
+Comment](https://github.com/airchains-network/wasmbft/tree/main/docs/rfc) in the
 CometBFT repo. Discussion at the RFC stage will build collective
 understanding of the dimensions of the problems and help structure conversations
 around trade-offs.
@@ -63,12 +63,12 @@ Please note that Go requires code to live under absolute paths, which complicate
 While my fork lives at `https://github.com/ebuchman/cometbft`,
 the code should never exist at `$GOPATH/src/github.com/ebuchman/cometbft`.
 Instead, we use `git remote` to add the fork as a new remote for the original repo,
-`$GOPATH/src/github.com/cometbft/cometbft`, and do all the work there.
+`$GOPATH/src/github.com/airchains-network/wasmbft`, and do all the work there.
 
 For instance, to create a fork and work on a branch of it, I would:
 
 - Create the fork on GitHub, using the fork button.
-- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/cometbft/cometbft`)
+- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/airchains-network/wasmbft`)
 - `git remote rename origin upstream`
 - `git remote add origin git@github.com:ebuchman/basecoin.git`
 
@@ -258,7 +258,7 @@ _Never_ force push `main`, unless fixing broken git history (which we rarely do
 anyways).
 
 To begin contributing, create a development branch either on
-`github.com/cometbft/cometbft`, or your fork (using `git remote add origin`).
+`github.com/airchains-network/wasmbft`, or your fork (using `git remote add origin`).
 
 Make changes, and before submitting a pull request, update the changelog to
 record your change. Also, run either `git rebase` or `git merge` on top of the

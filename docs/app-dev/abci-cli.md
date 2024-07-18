@@ -15,7 +15,7 @@ Make sure you [have Go installed](https://golang.org/doc/install).
 Next, install the `abci-cli` tool and example applications:
 
 ```sh
-git clone https://github.com/cometbft/cometbft.git
+git clone https://github.com/airchains-network/wasmbft.git
 cd cometbft
 make install_abci
 ```
@@ -65,7 +65,7 @@ purposes.
 We'll start a kvstore application, which was installed at the same time
 as `abci-cli` above. The kvstore just stores transactions in a merkle
 tree. Its code can be found
-[here](https://github.com/cometbft/cometbft/blob/v0.38.x/abci/cmd/abci-cli/abci-cli.go)
+[here](https://github.com/airchains-network/wasmbft/blob/v0.38.x/abci/cmd/abci-cli/abci-cli.go)
 and looks like the following:
 
 ```go
@@ -146,7 +146,7 @@ response.
 
 The server may be generic for a particular language, and we provide a
 [reference implementation in
-Golang](https://github.com/cometbft/cometbft/tree/v0.38.x/abci/server). See the
+Golang](https://github.com/airchains-network/wasmbft/tree/v0.38.x/abci/server). See the
 [list of other ABCI implementations](https://github.com/tendermint/awesome#ecosystem) for servers in
 other languages.
 

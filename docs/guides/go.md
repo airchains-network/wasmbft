@@ -85,7 +85,7 @@ CometBFT, `v0.38.0` in this example.
 
 ```bash
 go mod init kvstore
-go get github.com/cometbft/cometbft@v0.38.0
+go get github.com/airchains-network/wasmbft@v0.38.0
 ```
 
 After running the above commands you will see two generated files, `go.mod` and `go.sum`.
@@ -97,7 +97,7 @@ module kvstore
 go 1.21.1
 
 require (
-github.com/cometbft/cometbft v0.38.0
+github.com/airchains-network/wasmbft v0.38.0
 )
 ```
 
@@ -122,7 +122,7 @@ go build
 CometBFT communicates with the application through the Application
 BlockChain Interface (ABCI). The messages exchanged through the interface are
 defined in the ABCI [protobuf
-file](https://github.com/cometbft/cometbft/blob/v0.38.x/proto/tendermint/abci/types.proto).
+file](https://github.com/airchains-network/wasmbft/blob/v0.38.x/proto/tendermint/abci/types.proto).
 
 We begin by creating the basic scaffolding for an ABCI application by
 creating a new type, `KVStoreApplication`, which implements the
@@ -134,7 +134,7 @@ Create a file called `app.go` with the following contents:
 package main
 
 import (
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/airchains-network/wasmbft/abci/types"
 )
 
 type KVStoreApplication struct{}
@@ -207,7 +207,7 @@ The types used here are defined in the CometBFT library and were added as a depe
 to the project when you ran `go get`. If your IDE is not recognizing the types, go ahead and run the command again.
 
 ```bash
-go get github.com/cometbft/cometbft@v0.38.0
+go get github.com/airchains-network/wasmbft@v0.38.0
 ```
 
 Now go back to the `main.go` and modify the `main` function so it matches the following,
@@ -261,7 +261,7 @@ Next, update the `import` stanza at the top to include the Badger library:
 ```go
 import(
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/airchains-network/wasmbft/abci/types"
 )
 ```
 
@@ -324,7 +324,7 @@ import(
     "bytes"
 
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/airchains-network/wasmbft/abci/types"
 )
 ```
 
@@ -403,7 +403,7 @@ import (
     "log"
 
     "github.com/dgraph-io/badger/v3"
-    abcitypes "github.com/cometbft/cometbft/abci/types"
+    abcitypes "github.com/airchains-network/wasmbft/abci/types"
 )
 ```
 
@@ -496,7 +496,7 @@ package main
 import (
     "flag"
     "fmt"
-    abciserver "github.com/cometbft/cometbft/abci/server"
+    abciserver "github.com/airchains-network/wasmbft/abci/server"
     "log"
     "os"
     "os/signal"
@@ -504,7 +504,7 @@ import (
     "syscall"
 
     "github.com/dgraph-io/badger/v3"
-    cmtlog "github.com/cometbft/cometbft/libs/log"
+    cmtlog "github.com/airchains-network/wasmbft/libs/log"
 )
 
 var homeDir string
@@ -594,12 +594,12 @@ signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 
 Our application is almost ready to run, but first we'll need to populate the CometBFT configuration files.
 The following command will create a `cometbft-home` directory in your project and add a basic set of configuration files in `cometbft-home/config/`.
-For more information on what these files contain see [the configuration documentation](https://github.com/cometbft/cometbft/blob/v0.38.x/docs/core/configuration.md).
+For more information on what these files contain see [the configuration documentation](https://github.com/airchains-network/wasmbft/blob/v0.38.x/docs/core/configuration.md).
 
 From the root of your project, run:
 
 ```bash
-go run github.com/cometbft/cometbft/cmd/cometbft@v0.38.0 init --home /tmp/cometbft-home
+go run github.com/airchains-network/wasmbft/cmd/cometbft@v0.38.0 init --home /tmp/cometbft-home
 ```
 
 You should see an output similar to the following:
@@ -637,7 +637,7 @@ Open a new terminal window and cd to the same folder where the app is running.
 Then execute the following command:
 
 ```bash
-go run github.com/cometbft/cometbft/cmd/cometbft@v0.38.0 node --home /tmp/cometbft-home --proxy_app=unix://example.sock
+go run github.com/airchains-network/wasmbft/cmd/cometbft@v0.38.0 node --home /tmp/cometbft-home --proxy_app=unix://example.sock
 ```
 
 This should start the full node and connect to our ABCI application, which will be
@@ -706,4 +706,4 @@ echo "cm9ja3M=" | base64 -d
 
 ## Outro
 
-Hope you could run everything smoothly. If you have any difficulties running through this tutorial, reach out to us via [discord](https://discord.com/invite/cosmosnetwork) or open a new [issue](https://github.com/cometbft/cometbft/issues/new/choose) on Github.
+Hope you could run everything smoothly. If you have any difficulties running through this tutorial, reach out to us via [discord](https://discord.com/invite/cosmosnetwork) or open a new [issue](https://github.com/airchains-network/wasmbft/issues/new/choose) on Github.

@@ -6,7 +6,7 @@ order: 3
 
 ## From Binary
 
-To download pre-built binaries, see the [releases page](https://github.com/cometbft/cometbft/releases).
+To download pre-built binaries, see the [releases page](https://github.com/airchains-network/wasmbft/releases).
 
 ## From Source
 
@@ -21,7 +21,7 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 ### Get Source Code
 
 ```sh
-git clone https://github.com/cometbft/cometbft.git
+git clone https://github.com/airchains-network/wasmbft.git
 cd cometbft
 ```
 
