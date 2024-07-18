@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtnet "github.com/cometbft/cometbft/libs/net"
-	cmtos "github.com/cometbft/cometbft/libs/os"
+	"github.com/airchains-network/wasmbft/crypto/ed25519"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtnet "github.com/airchains-network/wasmbft/libs/net"
+	cmtos "github.com/airchains-network/wasmbft/libs/os"
 
-	"github.com/cometbft/cometbft/privval"
+	"github.com/airchains-network/wasmbft/privval"
 )
 
 func main() {

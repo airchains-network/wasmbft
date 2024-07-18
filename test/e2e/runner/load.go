@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/test/loadtime/payload"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/libs/log"
+	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
+	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
+	"github.com/airchains-network/wasmbft/test/loadtime/payload"
+	"github.com/airchains-network/wasmbft/types"
 	"github.com/google/uuid"
 )
 

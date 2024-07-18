@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	"github.com/airchains-network/wasmbft/p2p"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 func init() {

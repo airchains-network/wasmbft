@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cometbft/cometbft/crypto/batch"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
+	"github.com/airchains-network/wasmbft/crypto/batch"
+	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	cmtmath "github.com/airchains-network/wasmbft/libs/math"
 )
 
 const batchVerifyThreshold = 2

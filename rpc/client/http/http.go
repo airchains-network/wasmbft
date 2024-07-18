@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	rpcclient "github.com/cometbft/cometbft/rpc/client"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	jsonrpcclient "github.com/cometbft/cometbft/rpc/jsonrpc/client"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/libs/bytes"
+	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtpubsub "github.com/airchains-network/wasmbft/libs/pubsub"
+	"github.com/airchains-network/wasmbft/libs/service"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	rpcclient "github.com/airchains-network/wasmbft/rpc/client"
+	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
+	jsonrpcclient "github.com/airchains-network/wasmbft/rpc/jsonrpc/client"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 /*

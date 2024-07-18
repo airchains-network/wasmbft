@@ -15,14 +15,14 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmtos "github.com/cometbft/cometbft/libs/os"
-	"github.com/cometbft/cometbft/light"
-	lproxy "github.com/cometbft/cometbft/light/proxy"
-	lrpc "github.com/cometbft/cometbft/light/rpc"
-	dbs "github.com/cometbft/cometbft/light/store/db"
-	rpcserver "github.com/cometbft/cometbft/rpc/jsonrpc/server"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtmath "github.com/airchains-network/wasmbft/libs/math"
+	cmtos "github.com/airchains-network/wasmbft/libs/os"
+	"github.com/airchains-network/wasmbft/light"
+	lproxy "github.com/airchains-network/wasmbft/light/proxy"
+	lrpc "github.com/airchains-network/wasmbft/light/rpc"
+	dbs "github.com/airchains-network/wasmbft/light/store/db"
+	rpcserver "github.com/airchains-network/wasmbft/rpc/jsonrpc/server"
 )
 
 // LightCmd represents the base command when called without any subcommands

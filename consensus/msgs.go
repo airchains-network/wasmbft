@@ -6,13 +6,13 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	cstypes "github.com/cometbft/cometbft/consensus/types"
-	"github.com/cometbft/cometbft/libs/bits"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	"github.com/cometbft/cometbft/p2p"
-	cmtcons "github.com/cometbft/cometbft/proto/tendermint/consensus"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
+	cstypes "github.com/airchains-network/wasmbft/consensus/types"
+	"github.com/airchains-network/wasmbft/libs/bits"
+	cmtmath "github.com/airchains-network/wasmbft/libs/math"
+	"github.com/airchains-network/wasmbft/p2p"
+	cmtcons "github.com/airchains-network/wasmbft/proto/tendermint/consensus"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 // MsgToProto takes a consensus message type and returns the proto defined consensus message.

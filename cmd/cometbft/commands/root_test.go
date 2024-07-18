@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/cli"
-	cmtos "github.com/cometbft/cometbft/libs/os"
+	cfg "github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/libs/cli"
+	cmtos "github.com/airchains-network/wasmbft/libs/os"
 )
 
 // clearConfig clears env vars, the given root dir, and resets viper.

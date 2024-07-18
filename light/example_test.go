@@ -10,13 +10,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/light"
-	"github.com/cometbft/cometbft/light/provider"
-	httpp "github.com/cometbft/cometbft/light/provider/http"
-	dbs "github.com/cometbft/cometbft/light/store/db"
-	rpctest "github.com/cometbft/cometbft/rpc/test"
+	"github.com/airchains-network/wasmbft/abci/example/kvstore"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/light"
+	"github.com/airchains-network/wasmbft/light/provider"
+	httpp "github.com/airchains-network/wasmbft/light/provider/http"
+	dbs "github.com/airchains-network/wasmbft/light/store/db"
+	rpctest "github.com/airchains-network/wasmbft/rpc/test"
 )
 
 // Automatically getting new headers and verifying them.

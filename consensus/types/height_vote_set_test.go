@@ -4,13 +4,13 @@ import (
 	"os"
 	"testing"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	"github.com/cometbft/cometbft/internal/test"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cfg "github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	"github.com/airchains-network/wasmbft/internal/test"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/types"
+	cmttime "github.com/airchains-network/wasmbft/types/time"
 	"github.com/stretchr/testify/require"
 )
 

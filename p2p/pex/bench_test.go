@@ -3,7 +3,7 @@ package pex
 import (
 	"testing"
 
-	"github.com/cometbft/cometbft/p2p"
+	"github.com/airchains-network/wasmbft/p2p"
 )
 
 func BenchmarkAddrBook_hash(b *testing.B) {

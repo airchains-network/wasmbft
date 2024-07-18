@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
 )
 
 func TestBlockMeta_ToProto(t *testing.T) {

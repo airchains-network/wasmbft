@@ -38,8 +38,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/airchains-network/wasmbft/libs/service"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
 )
 
 type operation int

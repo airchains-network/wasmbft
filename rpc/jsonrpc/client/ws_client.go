@@ -12,11 +12,11 @@ import (
 	"github.com/gorilla/websocket"
 	metrics "github.com/rcrowley/go-metrics"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	"github.com/airchains-network/wasmbft/libs/service"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	types "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
 )
 
 const (

@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/p2p"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/airchains-network/wasmbft/libs/bytes"
+	"github.com/airchains-network/wasmbft/p2p"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 // List of blocks

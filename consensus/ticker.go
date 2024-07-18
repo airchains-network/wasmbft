@@ -3,8 +3,8 @@ package consensus
 import (
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/libs/service"
 )
 
 var (

@@ -4,8 +4,8 @@ package events
 import (
 	"fmt"
 
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/airchains-network/wasmbft/libs/service"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
 )
 
 // ErrListenerWasRemoved is returned by AddEvent if the listener was removed.

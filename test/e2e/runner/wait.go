@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
+	"github.com/airchains-network/wasmbft/libs/log"
+	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
 )
 
 // Wait waits for a number of blocks to be produced, and for all nodes to catch

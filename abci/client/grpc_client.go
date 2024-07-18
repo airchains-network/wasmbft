@@ -10,9 +10,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/cometbft/cometbft/abci/types"
-	cmtnet "github.com/cometbft/cometbft/libs/net"
-	"github.com/cometbft/cometbft/libs/service"
+	"github.com/airchains-network/wasmbft/abci/types"
+	cmtnet "github.com/airchains-network/wasmbft/libs/net"
+	"github.com/airchains-network/wasmbft/libs/service"
 )
 
 var _ Client = (*grpcClient)(nil)

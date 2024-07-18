@@ -18,13 +18,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
 
-	client "github.com/cometbft/cometbft/rpc/jsonrpc/client"
-	server "github.com/cometbft/cometbft/rpc/jsonrpc/server"
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	client "github.com/airchains-network/wasmbft/rpc/jsonrpc/client"
+	server "github.com/airchains-network/wasmbft/rpc/jsonrpc/server"
+	types "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
 )
 
 // Client and Server should work over tcp or unix sockets

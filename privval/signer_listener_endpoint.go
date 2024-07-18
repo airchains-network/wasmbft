@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/libs/service"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	privvalproto "github.com/cometbft/cometbft/proto/tendermint/privval"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/libs/service"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	privvalproto "github.com/airchains-network/wasmbft/proto/tendermint/privval"
 )
 
 // SignerListenerEndpointOption sets an optional parameter on the SignerListenerEndpoint.

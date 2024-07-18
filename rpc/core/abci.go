@@ -3,11 +3,11 @@ package core
 import (
 	"context"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/proxy"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/libs/bytes"
+	"github.com/airchains-network/wasmbft/proxy"
+	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
+	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
 )
 
 // ABCIQuery queries the application for some information.

@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"reflect"
 
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	cmtstrings "github.com/cometbft/cometbft/libs/strings"
-	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
-	"github.com/cometbft/cometbft/version"
+	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
+	cmtstrings "github.com/airchains-network/wasmbft/libs/strings"
+	tmp2p "github.com/airchains-network/wasmbft/proto/tendermint/p2p"
+	"github.com/airchains-network/wasmbft/version"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/p2p"
+	"github.com/airchains-network/wasmbft/p2p"
 )
 
 var _ p2p.Wrapper = &ChunkRequest{}

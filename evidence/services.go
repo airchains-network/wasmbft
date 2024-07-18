@@ -1,7 +1,7 @@
 package evidence
 
 import (
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 //go:generate ../scripts/mockery_generate.sh BlockStore

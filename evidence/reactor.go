@@ -6,11 +6,11 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	clist "github.com/cometbft/cometbft/libs/clist"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
+	clist "github.com/airchains-network/wasmbft/libs/clist"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/p2p"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 const (

@@ -9,9 +9,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cometbft/cometbft/crypto/merkle"
-	cmtmath "github.com/cometbft/cometbft/libs/math"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/crypto/merkle"
+	cmtmath "github.com/airchains-network/wasmbft/libs/math"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
 )
 
 const (

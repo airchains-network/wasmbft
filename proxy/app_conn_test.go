@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cometbft/cometbft/abci/example/kvstore"
-	"github.com/cometbft/cometbft/abci/server"
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/airchains-network/wasmbft/abci/example/kvstore"
+	"github.com/airchains-network/wasmbft/abci/server"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
 )
 
 var SOCKET = "socket"

@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/mocks"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
+	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
+	sm "github.com/airchains-network/wasmbft/state"
+	"github.com/airchains-network/wasmbft/state/mocks"
 )
 
 func TestBlockchainInfo(t *testing.T) {

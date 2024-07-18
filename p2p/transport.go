@@ -10,10 +10,10 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/libs/protoio"
-	"github.com/cometbft/cometbft/p2p/conn"
-	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
+	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/airchains-network/wasmbft/libs/protoio"
+	"github.com/airchains-network/wasmbft/p2p/conn"
+	tmp2p "github.com/airchains-network/wasmbft/proto/tendermint/p2p"
 )
 
 const (

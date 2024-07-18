@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	types "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
 )
 
 const (

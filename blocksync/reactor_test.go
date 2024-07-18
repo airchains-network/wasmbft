@@ -13,18 +13,18 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	mpmocks "github.com/cometbft/cometbft/mempool/mocks"
-	"github.com/cometbft/cometbft/p2p"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	cfg "github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/internal/test"
+	"github.com/airchains-network/wasmbft/libs/log"
+	mpmocks "github.com/airchains-network/wasmbft/mempool/mocks"
+	"github.com/airchains-network/wasmbft/p2p"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/proxy"
+	sm "github.com/airchains-network/wasmbft/state"
+	"github.com/airchains-network/wasmbft/store"
+	"github.com/airchains-network/wasmbft/types"
+	cmttime "github.com/airchains-network/wasmbft/types/time"
 )
 
 var config *cfg.Config

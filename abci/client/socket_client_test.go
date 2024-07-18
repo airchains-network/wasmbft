@@ -12,11 +12,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	"github.com/cometbft/cometbft/abci/server"
-	"github.com/cometbft/cometbft/abci/types"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
+	abcicli "github.com/airchains-network/wasmbft/abci/client"
+	"github.com/airchains-network/wasmbft/abci/server"
+	"github.com/airchains-network/wasmbft/abci/types"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	"github.com/airchains-network/wasmbft/libs/service"
 )
 
 func TestCalls(t *testing.T) {

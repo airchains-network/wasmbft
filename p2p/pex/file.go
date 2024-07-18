@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cometbft/cometbft/libs/tempfile"
+	"github.com/airchains-network/wasmbft/libs/tempfile"
 )
 
 /* Loading & Saving */

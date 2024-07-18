@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/crypto/secp256k1"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/crypto/ed25519"
+	"github.com/airchains-network/wasmbft/crypto/secp256k1"
+	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
 )
 
 const (

@@ -9,12 +9,12 @@ import (
 	"reflect"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/crypto/merkle"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/proxy"
+	sm "github.com/airchains-network/wasmbft/state"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

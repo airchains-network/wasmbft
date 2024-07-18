@@ -6,12 +6,12 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/cometbft/cometbft/libs/log"
-	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/light"
-	lrpc "github.com/cometbft/cometbft/light/rpc"
-	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
-	rpcserver "github.com/cometbft/cometbft/rpc/jsonrpc/server"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtpubsub "github.com/airchains-network/wasmbft/libs/pubsub"
+	"github.com/airchains-network/wasmbft/light"
+	lrpc "github.com/airchains-network/wasmbft/light/rpc"
+	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
+	rpcserver "github.com/airchains-network/wasmbft/rpc/jsonrpc/server"
 )
 
 // A Proxy defines parameters for running an HTTP server proxy.

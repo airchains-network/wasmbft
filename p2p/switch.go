@@ -8,11 +8,11 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/cmap"
-	"github.com/cometbft/cometbft/libs/rand"
-	"github.com/cometbft/cometbft/libs/service"
-	"github.com/cometbft/cometbft/p2p/conn"
+	"github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/libs/cmap"
+	"github.com/airchains-network/wasmbft/libs/rand"
+	"github.com/airchains-network/wasmbft/libs/service"
+	"github.com/airchains-network/wasmbft/p2p/conn"
 )
 
 const (

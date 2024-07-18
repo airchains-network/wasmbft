@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/evidence"
-	"github.com/cometbft/cometbft/evidence/mocks"
-	"github.com/cometbft/cometbft/internal/test"
-	"github.com/cometbft/cometbft/libs/log"
-	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
-	sm "github.com/cometbft/cometbft/state"
-	smmocks "github.com/cometbft/cometbft/state/mocks"
-	"github.com/cometbft/cometbft/store"
-	"github.com/cometbft/cometbft/types"
-	"github.com/cometbft/cometbft/version"
+	"github.com/airchains-network/wasmbft/evidence"
+	"github.com/airchains-network/wasmbft/evidence/mocks"
+	"github.com/airchains-network/wasmbft/internal/test"
+	"github.com/airchains-network/wasmbft/libs/log"
+	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
+	sm "github.com/airchains-network/wasmbft/state"
+	smmocks "github.com/airchains-network/wasmbft/state/mocks"
+	"github.com/airchains-network/wasmbft/store"
+	"github.com/airchains-network/wasmbft/types"
+	"github.com/airchains-network/wasmbft/version"
 )
 
 func TestMain(m *testing.M) {

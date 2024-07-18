@@ -9,16 +9,16 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtos "github.com/cometbft/cometbft/libs/os"
-	"github.com/cometbft/cometbft/libs/protoio"
-	"github.com/cometbft/cometbft/libs/tempfile"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/cometbft/cometbft/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/airchains-network/wasmbft/crypto/ed25519"
+	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
+	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	cmtos "github.com/airchains-network/wasmbft/libs/os"
+	"github.com/airchains-network/wasmbft/libs/protoio"
+	"github.com/airchains-network/wasmbft/libs/tempfile"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/airchains-network/wasmbft/types"
+	cmttime "github.com/airchains-network/wasmbft/types/time"
 )
 
 // TODO: type ?

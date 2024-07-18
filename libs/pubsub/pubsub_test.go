@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/log"
+	"github.com/airchains-network/wasmbft/libs/log"
 
-	"github.com/cometbft/cometbft/libs/pubsub"
-	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/airchains-network/wasmbft/libs/pubsub"
+	"github.com/airchains-network/wasmbft/libs/pubsub/query"
 )
 
 const (

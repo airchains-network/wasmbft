@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/protoio"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	cmttime "github.com/cometbft/cometbft/types/time"
+	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
+	"github.com/airchains-network/wasmbft/libs/protoio"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	cmttime "github.com/airchains-network/wasmbft/types/time"
 )
 
 var (

@@ -9,12 +9,12 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/cometbft/cometbft/evidence"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	cmtstore "github.com/cometbft/cometbft/proto/tendermint/store"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/evidence"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	cmtstore "github.com/airchains-network/wasmbft/proto/tendermint/store"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	sm "github.com/airchains-network/wasmbft/state"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 /*

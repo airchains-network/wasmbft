@@ -6,9 +6,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/cometbft/cometbft/libs/log"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/test/e2e/pkg/infra"
+	"github.com/airchains-network/wasmbft/libs/log"
+	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
+	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra"
 )
 
 func Start(ctx context.Context, testnet *e2e.Testnet, p infra.Provider) error {

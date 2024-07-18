@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"time"
 
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	"github.com/cometbft/cometbft/libs/log"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/proxy"
-	sm "github.com/cometbft/cometbft/state"
-	"github.com/cometbft/cometbft/state/indexer"
-	"github.com/cometbft/cometbft/state/txindex"
-	"github.com/cometbft/cometbft/types"
+	cfg "github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/crypto"
+	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	"github.com/airchains-network/wasmbft/libs/log"
+	mempl "github.com/airchains-network/wasmbft/mempool"
+	"github.com/airchains-network/wasmbft/p2p"
+	"github.com/airchains-network/wasmbft/proxy"
+	sm "github.com/airchains-network/wasmbft/state"
+	"github.com/airchains-network/wasmbft/state/indexer"
+	"github.com/airchains-network/wasmbft/state/txindex"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 const (

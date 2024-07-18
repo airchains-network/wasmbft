@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cometbft/cometbft/light"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/light"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 // verify verifies the evidence fully by checking:

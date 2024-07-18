@@ -3,10 +3,10 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/cometbft/cometbft/abci/client"
-	cmtlog "github.com/cometbft/cometbft/libs/log"
-	cmtos "github.com/cometbft/cometbft/libs/os"
-	"github.com/cometbft/cometbft/libs/service"
+	abcicli "github.com/airchains-network/wasmbft/abci/client"
+	cmtlog "github.com/airchains-network/wasmbft/libs/log"
+	cmtos "github.com/airchains-network/wasmbft/libs/os"
+	"github.com/airchains-network/wasmbft/libs/service"
 )
 
 const (

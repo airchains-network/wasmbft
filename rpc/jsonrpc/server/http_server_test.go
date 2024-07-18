@@ -16,8 +16,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cometbft/cometbft/libs/log"
-	types "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/airchains-network/wasmbft/libs/log"
+	types "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
 )
 
 type sampleResult struct {

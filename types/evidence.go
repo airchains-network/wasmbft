@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/crypto/merkle"
-	"github.com/cometbft/cometbft/crypto/tmhash"
-	cmtjson "github.com/cometbft/cometbft/libs/json"
-	cmtrand "github.com/cometbft/cometbft/libs/rand"
-	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/crypto/merkle"
+	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.

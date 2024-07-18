@@ -21,13 +21,13 @@ import (
 	"golang.org/x/crypto/hkdf"
 	"golang.org/x/crypto/nacl/box"
 
-	"github.com/cometbft/cometbft/crypto"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
-	"github.com/cometbft/cometbft/libs/async"
-	"github.com/cometbft/cometbft/libs/protoio"
-	cmtsync "github.com/cometbft/cometbft/libs/sync"
-	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
+	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/airchains-network/wasmbft/crypto/ed25519"
+	cryptoenc "github.com/airchains-network/wasmbft/crypto/encoding"
+	"github.com/airchains-network/wasmbft/libs/async"
+	"github.com/airchains-network/wasmbft/libs/protoio"
+	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	tmp2p "github.com/airchains-network/wasmbft/proto/tendermint/p2p"
 )
 
 // 4 + 1024 == 1028 total frame size
@@ -53,7 +53,7 @@ var (
 
 // SecretConnection implements net.Conn.
 // It is an implementation of the STS protocol.
-// See https://github.com/cometbft/cometbft/blob/0.1/docs/sts-final.pdf for
+// See https://github.com/airchains-network/wasmbft/blob/0.1/docs/sts-final.pdf for
 // details on the protocol.
 //
 // Consumers of the SecretConnection are responsible for authenticating

@@ -15,14 +15,14 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/crypto/ed25519"
-	"github.com/cometbft/cometbft/libs/log"
-	"github.com/cometbft/cometbft/p2p"
-	"github.com/cometbft/cometbft/privval"
-	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
-	"github.com/cometbft/cometbft/test/e2e/pkg/infra"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/crypto/ed25519"
+	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/airchains-network/wasmbft/p2p"
+	"github.com/airchains-network/wasmbft/privval"
+	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
+	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 const (

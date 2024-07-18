@@ -4,11 +4,11 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/cometbft/cometbft/cmd/cometbft/commands"
-	"github.com/cometbft/cometbft/cmd/cometbft/commands/debug"
-	cfg "github.com/cometbft/cometbft/config"
-	"github.com/cometbft/cometbft/libs/cli"
-	nm "github.com/cometbft/cometbft/node"
+	cmd "github.com/airchains-network/wasmbft/cmd/cometbft/commands"
+	"github.com/airchains-network/wasmbft/cmd/cometbft/commands/debug"
+	cfg "github.com/airchains-network/wasmbft/config"
+	"github.com/airchains-network/wasmbft/libs/cli"
+	nm "github.com/airchains-network/wasmbft/node"
 )
 
 func main() {

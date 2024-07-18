@@ -3,11 +3,11 @@ package consensus
 import (
 	"context"
 
-	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/cometbft/cometbft/libs/clist"
-	mempl "github.com/cometbft/cometbft/mempool"
-	"github.com/cometbft/cometbft/proxy"
-	"github.com/cometbft/cometbft/types"
+	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/libs/clist"
+	mempl "github.com/airchains-network/wasmbft/mempool"
+	"github.com/airchains-network/wasmbft/proxy"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 //-----------------------------------------------------------------------------

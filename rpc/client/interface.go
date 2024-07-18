@@ -23,10 +23,10 @@ implementation.
 import (
 	"context"
 
-	"github.com/cometbft/cometbft/libs/bytes"
-	"github.com/cometbft/cometbft/libs/service"
-	ctypes "github.com/cometbft/cometbft/rpc/core/types"
-	"github.com/cometbft/cometbft/types"
+	"github.com/airchains-network/wasmbft/libs/bytes"
+	"github.com/airchains-network/wasmbft/libs/service"
+	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
+	"github.com/airchains-network/wasmbft/types"
 )
 
 // Client wraps most important rpc calls a client would make if you want to
