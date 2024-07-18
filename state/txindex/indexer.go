@@ -3,10 +3,8 @@ package txindex
 import (
 	"context"
 	"errors"
-
-	"github.com/airchains-network/wasmbft/libs/log"
-
 	abci "github.com/airchains-network/wasmbft/abci/types"
+	"github.com/airchains-network/wasmbft/libs/log"
 	"github.com/airchains-network/wasmbft/libs/pubsub/query"
 )
 
@@ -18,6 +16,9 @@ import (
 type TxIndexer interface {
 	// AddBatch analyzes, indexes and stores a batch of transactions.
 	AddBatch(b *Batch) error
+
+	AddPod(b *Batch) error
+	GetbytedataFortracks(hash []byte) ([]byte, error)
 
 	// Index analyzes, indexes and stores a single transaction.
 	Index(result *abci.TxResult) error

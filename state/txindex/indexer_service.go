@@ -2,7 +2,6 @@ package txindex
 
 import (
 	"context"
-
 	"github.com/airchains-network/wasmbft/libs/service"
 	"github.com/airchains-network/wasmbft/state/indexer"
 	"github.com/airchains-network/wasmbft/types"
@@ -15,7 +14,6 @@ const (
 )
 
 // IndexerService connects event bus, transaction and block indexers together in
-// order to index transactions and blocks coming from the event bus.
 type IndexerService struct {
 	service.BaseService
 
@@ -32,18 +30,14 @@ func NewIndexerService(
 	eventBus *types.EventBus,
 	terminateOnError bool,
 ) *IndexerService {
-
 	is := &IndexerService{txIdxr: txIdxr, blockIdxr: blockIdxr, eventBus: eventBus, terminateOnError: terminateOnError}
 	is.BaseService = *service.NewBaseService(nil, "IndexerService", is)
 	return is
 }
 
 // OnStart implements service.Service by subscribing for all transactions
-// and indexing them by events.
 func (is *IndexerService) OnStart() error {
-	// Use SubscribeUnbuffered here to ensure both subscriptions does not get
-	// canceled due to not pulling messages fast enough. Cause this might
-	// sometimes happen when there are no other subscribers.
+
 	blockSub, err := is.eventBus.SubscribeUnbuffered(
 		context.Background(),
 		subscriber,
@@ -62,17 +56,17 @@ func (is *IndexerService) OnStart() error {
 			select {
 			case <-blockSub.Canceled():
 				return
+
 			case msg := <-blockSub.Out():
+
 				eventNewBlockEvents := msg.Data().(types.EventDataNewBlockEvents)
 				height := eventNewBlockEvents.Height
 				numTxs := eventNewBlockEvents.NumTxs
-
 				batch := NewBatch(numTxs)
 
 				for i := int64(0); i < numTxs; i++ {
 					msg2 := <-txsSub.Out()
 					txResult := msg2.Data().(types.EventDataTx).TxResult
-
 					if err = batch.Add(&txResult); err != nil {
 						is.Logger.Error(
 							"failed to add tx to batch",
@@ -80,7 +74,6 @@ func (is *IndexerService) OnStart() error {
 							"index", txResult.Index,
 							"err", err,
 						)
-
 						if is.terminateOnError {
 							if err := is.Stop(); err != nil {
 								is.Logger.Error("failed to stop", "err", err)
@@ -102,7 +95,27 @@ func (is *IndexerService) OnStart() error {
 					is.Logger.Info("indexed block events", "height", height)
 				}
 
+				//for _, event := range eventNewBlockEvents.Events {
+				//	fmt.Println("Event Type:", event.Type)
+				//	for _, attr := range event.Attributes {
+				//		fmt.Println("Key:", attr.Key, "Value:", attr.Value)
+				//	}
+				//}
+
 				if err = is.txIdxr.AddBatch(batch); err != nil {
+					is.Logger.Error("failed to index block txs", "height", height, "err", err)
+					if is.terminateOnError {
+						if err := is.Stop(); err != nil {
+							is.Logger.Error("failed to stop", "err", err)
+						}
+						return
+					}
+				} else {
+					is.Logger.Debug("indexed transactions", "height", height, "num_txs", numTxs)
+				}
+
+				// index pods in database
+				if err = is.txIdxr.AddPod(batch); err != nil {
 					is.Logger.Error("failed to index block txs", "height", height, "err", err)
 					if is.terminateOnError {
 						if err := is.Stop(); err != nil {

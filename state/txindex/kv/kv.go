@@ -5,23 +5,19 @@ import (
 	"context"
 	"encoding/hex"
 	"fmt"
-	"math/big"
-	"strconv"
-	"strings"
-
-	"github.com/airchains-network/wasmbft/libs/log"
-
-	"github.com/cosmos/gogoproto/proto"
-
-	dbm "github.com/cometbft/cometbft-db"
-
 	abci "github.com/airchains-network/wasmbft/abci/types"
 	idxutil "github.com/airchains-network/wasmbft/internal/indexer"
+	"github.com/airchains-network/wasmbft/libs/log"
 	"github.com/airchains-network/wasmbft/libs/pubsub/query"
 	"github.com/airchains-network/wasmbft/libs/pubsub/query/syntax"
 	"github.com/airchains-network/wasmbft/state/indexer"
 	"github.com/airchains-network/wasmbft/state/txindex"
 	"github.com/airchains-network/wasmbft/types"
+	dbm "github.com/cometbft/cometbft-db"
+	"github.com/cosmos/gogoproto/proto"
+	"math/big"
+	"strconv"
+	"strings"
 )
 
 const (
@@ -33,11 +29,9 @@ var _ txindex.TxIndexer = (*TxIndex)(nil)
 
 // TxIndex is the simplest possible indexer, backed by key-value storage (levelDB).
 type TxIndex struct {
-	store dbm.DB
-	// Number the events in the event list
+	store    dbm.DB
 	eventSeq int64
-
-	log log.Logger
+	log      log.Logger
 }
 
 // NewTxIndex creates new KV indexer.
@@ -80,8 +74,11 @@ func (txi *TxIndex) Get(hash []byte) (*abci.TxResult, error) {
 // the respective attribute's key delimited by a "." (eg. "account.number").
 // Any event with an empty type is not indexed.
 func (txi *TxIndex) AddBatch(b *txindex.Batch) error {
+
 	storeBatch := txi.store.NewBatch()
 	defer storeBatch.Close()
+
+	fmt.Println("CountTx", len(b.Ops))
 
 	for _, result := range b.Ops {
 		hash := types.Tx(result.Tx).Hash()
@@ -102,6 +99,7 @@ func (txi *TxIndex) AddBatch(b *txindex.Batch) error {
 		if err != nil {
 			return err
 		}
+
 		// index by hash (always)
 		err = storeBatch.Set(hash, rawBytes)
 		if err != nil {
@@ -197,16 +195,6 @@ func (txi *TxIndex) indexEvents(result *abci.TxResult, hash []byte, store dbm.Ba
 }
 
 // Search performs a search using the given query.
-//
-// It breaks the query into conditions (like "tx.height > 5"). For each
-// condition, it queries the DB index. One special use cases here: (1) if
-// "tx.hash" is found, it returns tx result for it (2) for range queries it is
-// better for the client to provide both lower and upper bounds, so we are not
-// performing a full scan. Results from querying indexes are then intersected
-// and returned to the caller, in no particular order.
-//
-// Search will exit early and return any result fetched so far,
-// when a message is received on the context chan.
 func (txi *TxIndex) Search(ctx context.Context, q *query.Query) ([]*abci.TxResult, error) {
 	select {
 	case <-ctx.Done():
@@ -518,10 +506,6 @@ REMOVE_LOOP:
 }
 
 // matchRange returns all matching txs by hash that meet a given queryRange and
-// start key. An already filtered result (filteredHashes) is provided such that
-// any non-intersecting matches are removed.
-//
-// NOTE: filteredHashes may be empty if no previous condition has matched.
 func (txi *TxIndex) matchRange(
 	ctx context.Context,
 	qr indexer.QueryRange,
@@ -640,9 +624,6 @@ REMOVE_LOOP:
 
 	return filteredHashes
 }
-
-// Keys
-
 func isTagKey(key []byte) bool {
 	// Normally, if the event was indexed with an event sequence, the number of
 	// tags should 4. Alternatively it should be 3 if the event was not indexed
@@ -651,7 +632,6 @@ func isTagKey(key []byte) bool {
 	numTags := strings.Count(string(key), tagKeySeparator)
 	return numTags >= 3
 }
-
 func extractHeightFromKey(key []byte) (int64, error) {
 	parts := strings.SplitN(string(key), tagKeySeparator, -1)
 
@@ -672,7 +652,6 @@ func extractValueFromKey(key []byte) string {
 	return strings.TrimSuffix(value, suffix)
 
 }
-
 func extractEventSeqFromKey(key []byte) string {
 	parts := strings.SplitN(string(key), tagKeySeparator, -1)
 
@@ -692,7 +671,6 @@ func keyForEvent(key string, value string, result *abci.TxResult, eventSeq int64
 		eventSeqSeparator+strconv.FormatInt(eventSeq, 10),
 	))
 }
-
 func keyForHeight(result *abci.TxResult) []byte {
 	return []byte(fmt.Sprintf("%s/%d/%d/%d%s",
 		types.TxHeightKey,
@@ -704,18 +682,56 @@ func keyForHeight(result *abci.TxResult) []byte {
 		eventSeqSeparator+"0",
 	))
 }
-
 func startKeyForCondition(c syntax.Condition, height int64) []byte {
 	if height > 0 {
 		return startKey(c.Tag, c.Arg.Value(), height)
 	}
 	return startKey(c.Tag, c.Arg.Value())
 }
-
 func startKey(fields ...interface{}) []byte {
 	var b bytes.Buffer
 	for _, f := range fields {
 		b.Write([]byte(fmt.Sprintf("%v", f) + tagKeySeparator))
 	}
 	return b.Bytes()
+}
+func (txi *TxIndex) AddPod(b *txindex.Batch) error {
+
+	// initiate all databases required to make pods if its the first time
+	byteRes, err := txi.store.Get([]byte("countTxs"))
+	if err != nil {
+		return err
+	}
+
+	if byteRes == nil {
+		err = InitiateDatabaseForPods(txi)
+		if err != nil {
+			return err
+		}
+	}
+
+	// store pod in db
+	err = StorePod(txi, b) // , client, registry, account)
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+
+	return nil
+}
+func (txi *TxIndex) GetbytedataFortracks(hash []byte) ([]byte, error) {
+
+	if len(hash) == 0 {
+		return nil, txindex.ErrorEmptyHash
+	}
+
+	rawBytes, err := txi.store.Get(hash)
+	if err != nil {
+		panic(err)
+	}
+	if rawBytes == nil {
+		return nil, nil
+	}
+
+	return rawBytes, nil
 }

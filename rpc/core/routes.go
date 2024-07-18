@@ -16,6 +16,10 @@ func (env *Environment) GetRoutes() RoutesMap {
 		"unsubscribe":     rpc.NewWSRPCFunc(env.Unsubscribe, "query"),
 		"unsubscribe_all": rpc.NewWSRPCFunc(env.UnsubscribeAll, ""),
 
+		// tracks
+		"tracks_get_pod":   rpc.NewRPCFunc(env.TracksGetPodTxs, "podNumber"),
+		"tracks_pod_count": rpc.NewRPCFunc(env.TracksGetPodCount, ""),
+
 		// info AP
 		"health":               rpc.NewRPCFunc(env.Health, ""),
 		"status":               rpc.NewRPCFunc(env.Status, ""),
