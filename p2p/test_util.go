@@ -5,14 +5,14 @@ import (
 	"net"
 	"time"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtnet "github.com/airchains-network/wasmbft/libs/net"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtnet "github.com/cometbft/cometbft/libs/net"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
 
-	"github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/p2p/conn"
+	"github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/p2p/conn"
 )
 
 const testCh = 0x01

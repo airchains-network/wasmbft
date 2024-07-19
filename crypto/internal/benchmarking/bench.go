@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/cometbft/cometbft/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

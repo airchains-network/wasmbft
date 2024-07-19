@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
 )
 
 var (

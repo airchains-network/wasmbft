@@ -1,4 +1,4 @@
-module github.com/airchains-network/wasmbft
+module github.com/cometbft/cometbft
 
 go 1.21
 

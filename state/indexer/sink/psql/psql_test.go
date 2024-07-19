@@ -18,10 +18,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	tmlog "github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/state/txindex"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	tmlog "github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/state/txindex"
+	"github.com/cometbft/cometbft/types"
 
 	// Register the Postgres database driver.
 	_ "github.com/lib/pq"

@@ -5,15 +5,15 @@ import (
 	"context"
 	"encoding/hex"
 	"fmt"
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	idxutil "github.com/airchains-network/wasmbft/internal/indexer"
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query/syntax"
-	"github.com/airchains-network/wasmbft/state/indexer"
-	"github.com/airchains-network/wasmbft/state/txindex"
-	"github.com/airchains-network/wasmbft/types"
 	dbm "github.com/cometbft/cometbft-db"
+	abci "github.com/cometbft/cometbft/abci/types"
+	idxutil "github.com/cometbft/cometbft/internal/indexer"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/libs/pubsub/query/syntax"
+	"github.com/cometbft/cometbft/state/indexer"
+	"github.com/cometbft/cometbft/state/txindex"
+	"github.com/cometbft/cometbft/types"
 	"github.com/cosmos/gogoproto/proto"
 	"math/big"
 	"strconv"
@@ -77,8 +77,6 @@ func (txi *TxIndex) AddBatch(b *txindex.Batch) error {
 
 	storeBatch := txi.store.NewBatch()
 	defer storeBatch.Close()
-
-	fmt.Println("CountTx", len(b.Ops))
 
 	for _, result := range b.Ops {
 		hash := types.Tx(result.Tx).Hash()
@@ -713,25 +711,22 @@ func (txi *TxIndex) AddPod(b *txindex.Batch) error {
 	// store pod in db
 	err = StorePod(txi, b) // , client, registry, account)
 	if err != nil {
-		fmt.Println(err)
+		txi.log.Error("Error storing pod", "err", err, "module", "txindex")
 		return err
 	}
 
 	return nil
 }
 func (txi *TxIndex) GetbytedataFortracks(hash []byte) ([]byte, error) {
-
 	if len(hash) == 0 {
 		return nil, txindex.ErrorEmptyHash
 	}
-
 	rawBytes, err := txi.store.Get(hash)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 	if rawBytes == nil {
 		return nil, nil
 	}
-
 	return rawBytes, nil
 }

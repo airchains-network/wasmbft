@@ -10,18 +10,18 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	"github.com/airchains-network/wasmbft/evidence"
-	"github.com/airchains-network/wasmbft/evidence/mocks"
-	"github.com/airchains-network/wasmbft/internal/test"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
-	sm "github.com/airchains-network/wasmbft/state"
-	smmocks "github.com/airchains-network/wasmbft/state/mocks"
-	"github.com/airchains-network/wasmbft/types"
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/evidence"
+	"github.com/cometbft/cometbft/evidence/mocks"
+	"github.com/cometbft/cometbft/internal/test"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
+	sm "github.com/cometbft/cometbft/state"
+	smmocks "github.com/cometbft/cometbft/state/mocks"
+	"github.com/cometbft/cometbft/types"
+	"github.com/cometbft/cometbft/version"
 )
 
 const (

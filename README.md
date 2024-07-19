@@ -26,7 +26,7 @@ To use WasmBFT in your Go project, you can add it to your `go.mod` file or repla
 Add the following line to your `go.mod` file:
 
 ```plaintext
-require github.com/airchains-network/wasmbft v0.0.1
+require github.com/cometbft/cometbft v0.0.1
 ```
 
 Then run:
@@ -40,7 +40,7 @@ go mod tidy
 If your project already uses CometBFT and you want to replace it with WasmBFT, add the following replace directive to your `go.mod` file:
 
 ```plaintext
-replace github.com/cometbft/cometbft => github.com/airchains-network/wasmbft v0.0.1
+replace github.com/cometbft/cometbft => github.com/cometbft/cometbft v0.0.1
 ```
 
 Then run:
@@ -126,17 +126,17 @@ Please follow the [Code of Conduct](./CODE_OF_CONDUCT.md) in all interactions. F
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/airchains-network/wasmbft/blob/main/LICENSE) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/cometbft/cometbft/blob/main/LICENSE) file for details.
 
 ## Contact
 
 For any inquiries or issues, please contact us via [Airchains Discord](https://discord.gg/airchains).
 
 [version-badge]: https://img.shields.io/github/v/release/airchains-network/wasmbft.svg
-[version-url]: https://github.com/airchains-network/wasmbft/releases/latest
+[version-url]: https://github.com/cometbft/cometbft/releases/latest
 [go-badge]: https://img.shields.io/badge/go-1.20-blue.svg
 [go-url]: https://github.com/moovweb/gvm
 [license-badge]: https://img.shields.io/github/license/airchains-network/wasmbft.svg
-[license-url]: https://github.com/airchains-network/wasmbft/blob/main/LICENSE
-[sg-badge]: https://sourcegraph.com/github.com/airchains-network/wasmbft/-/badge.svg
-[sg-url]: https://sourcegraph.com/github.com/airchains-network/wasmbft?badge
+[license-url]: https://github.com/cometbft/cometbft/blob/main/LICENSE
+[sg-badge]: https://sourcegraph.com/github.com/cometbft/cometbft/-/badge.svg
+[sg-url]: https://sourcegraph.com/github.com/cometbft/cometbft?badge

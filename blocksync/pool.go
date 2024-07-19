@@ -7,12 +7,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	flow "github.com/airchains-network/wasmbft/libs/flowrate"
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/service"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	"github.com/airchains-network/wasmbft/p2p"
-	"github.com/airchains-network/wasmbft/types"
+	flow "github.com/cometbft/cometbft/libs/flowrate"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/service"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/cometbft/cometbft/p2p"
+	"github.com/cometbft/cometbft/types"
 )
 
 /*

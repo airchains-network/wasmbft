@@ -12,8 +12,8 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/airchains-network/wasmbft/consensus"
-	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	cs "github.com/cometbft/cometbft/consensus"
+	cmtjson "github.com/cometbft/cometbft/libs/json"
 )
 
 func main() {

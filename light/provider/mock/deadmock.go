@@ -3,8 +3,8 @@ package mock
 import (
 	"context"
 
-	"github.com/airchains-network/wasmbft/light/provider"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/light/provider"
+	"github.com/cometbft/cometbft/types"
 )
 
 type deadMock struct {

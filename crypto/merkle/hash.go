@@ -3,7 +3,7 @@ package merkle
 import (
 	"hash"
 
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/crypto/tmhash"
 )
 
 // TODO: make these have a large predefined capacity

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 )
 
 func TestVariousLevels(t *testing.T) {

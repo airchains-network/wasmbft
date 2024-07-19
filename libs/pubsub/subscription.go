@@ -3,7 +3,7 @@ package pubsub
 import (
 	"errors"
 
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
 )
 
 var (

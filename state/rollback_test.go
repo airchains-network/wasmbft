@@ -9,15 +9,15 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	cmtstate "github.com/airchains-network/wasmbft/proto/tendermint/state"
-	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
-	"github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/state/mocks"
-	"github.com/airchains-network/wasmbft/store"
-	"github.com/airchains-network/wasmbft/types"
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
+	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
+	"github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/state/mocks"
+	"github.com/cometbft/cometbft/store"
+	"github.com/cometbft/cometbft/types"
+	"github.com/cometbft/cometbft/version"
 )
 
 func TestRollback(t *testing.T) {

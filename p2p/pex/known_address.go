@@ -3,7 +3,7 @@ package pex
 import (
 	"time"
 
-	"github.com/airchains-network/wasmbft/p2p"
+	"github.com/cometbft/cometbft/p2p"
 )
 
 // knownAddress tracks information about a known network address

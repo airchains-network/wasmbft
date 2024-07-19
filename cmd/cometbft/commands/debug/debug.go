@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 )
 
 var (

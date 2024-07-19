@@ -9,16 +9,16 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abcitypes "github.com/airchains-network/wasmbft/abci/types"
-	cmtcfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/progressbar"
-	"github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/state/indexer"
-	blockidxkv "github.com/airchains-network/wasmbft/state/indexer/block/kv"
-	"github.com/airchains-network/wasmbft/state/indexer/sink/psql"
-	"github.com/airchains-network/wasmbft/state/txindex"
-	"github.com/airchains-network/wasmbft/state/txindex/kv"
-	"github.com/airchains-network/wasmbft/types"
+	abcitypes "github.com/cometbft/cometbft/abci/types"
+	cmtcfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/progressbar"
+	"github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/state/indexer"
+	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
+	"github.com/cometbft/cometbft/state/indexer/sink/psql"
+	"github.com/cometbft/cometbft/state/txindex"
+	"github.com/cometbft/cometbft/state/txindex/kv"
+	"github.com/cometbft/cometbft/types"
 )
 
 const (

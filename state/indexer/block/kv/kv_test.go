@@ -9,10 +9,10 @@ import (
 
 	db "github.com/cometbft/cometbft-db"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	blockidxkv "github.com/airchains-network/wasmbft/state/indexer/block/kv"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	blockidxkv "github.com/cometbft/cometbft/state/indexer/block/kv"
+	"github.com/cometbft/cometbft/types"
 )
 
 func TestBlockIndexer(t *testing.T) {

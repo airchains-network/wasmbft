@@ -4,9 +4,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/airchains-network/wasmbft/config"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	"github.com/cometbft/cometbft/config"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

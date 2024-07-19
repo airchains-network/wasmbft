@@ -7,10 +7,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/exec"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra/docker"
+	"github.com/cometbft/cometbft/libs/log"
+	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
+	"github.com/cometbft/cometbft/test/e2e/pkg/exec"
+	"github.com/cometbft/cometbft/test/e2e/pkg/infra/docker"
 )
 
 // Cleanup removes the Docker Compose containers and testnet directory.

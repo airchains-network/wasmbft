@@ -11,13 +11,13 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	auto "github.com/airchains-network/wasmbft/libs/autofile"
-	cmtjson "github.com/airchains-network/wasmbft/libs/json"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtos "github.com/airchains-network/wasmbft/libs/os"
-	"github.com/airchains-network/wasmbft/libs/service"
-	cmtcons "github.com/airchains-network/wasmbft/proto/tendermint/consensus"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
+	auto "github.com/cometbft/cometbft/libs/autofile"
+	cmtjson "github.com/cometbft/cometbft/libs/json"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtos "github.com/cometbft/cometbft/libs/os"
+	"github.com/cometbft/cometbft/libs/service"
+	cmtcons "github.com/cometbft/cometbft/proto/tendermint/consensus"
+	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 const (

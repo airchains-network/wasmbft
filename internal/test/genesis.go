@@ -3,7 +3,7 @@ package test
 import (
 	"time"
 
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 func GenesisDoc(

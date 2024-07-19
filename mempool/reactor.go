@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"time"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/clist"
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/p2p"
-	protomem "github.com/airchains-network/wasmbft/proto/tendermint/mempool"
-	"github.com/airchains-network/wasmbft/types"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/clist"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/p2p"
+	protomem "github.com/cometbft/cometbft/proto/tendermint/mempool"
+	"github.com/cometbft/cometbft/types"
 	"golang.org/x/sync/semaphore"
 )
 

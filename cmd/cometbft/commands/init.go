@@ -5,13 +5,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	cmtos "github.com/airchains-network/wasmbft/libs/os"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/p2p"
-	"github.com/airchains-network/wasmbft/privval"
-	"github.com/airchains-network/wasmbft/types"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
+	cfg "github.com/cometbft/cometbft/config"
+	cmtos "github.com/cometbft/cometbft/libs/os"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/p2p"
+	"github.com/cometbft/cometbft/privval"
+	"github.com/cometbft/cometbft/types"
+	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 // InitFilesCmd initializes a fresh CometBFT instance.

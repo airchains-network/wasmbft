@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra/docker"
+	"github.com/cometbft/cometbft/libs/log"
+	rpctypes "github.com/cometbft/cometbft/rpc/core/types"
+	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
+	"github.com/cometbft/cometbft/test/e2e/pkg/infra/docker"
 )
 
 // Perturbs a running testnet.

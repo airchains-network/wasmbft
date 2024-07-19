@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/airchains-network/wasmbft/libs/bytes"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/libs/bytes"
+	"github.com/cometbft/cometbft/types"
 )
 
 //-----------------------------------------------------------------------------

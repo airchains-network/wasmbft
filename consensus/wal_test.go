@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/airchains-network/wasmbft/consensus/types"
-	"github.com/airchains-network/wasmbft/crypto/merkle"
-	"github.com/airchains-network/wasmbft/libs/autofile"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmttypes "github.com/airchains-network/wasmbft/types"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
+	"github.com/cometbft/cometbft/consensus/types"
+	"github.com/cometbft/cometbft/crypto/merkle"
+	"github.com/cometbft/cometbft/libs/autofile"
+	"github.com/cometbft/cometbft/libs/log"
+	cmttypes "github.com/cometbft/cometbft/types"
+	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 const (

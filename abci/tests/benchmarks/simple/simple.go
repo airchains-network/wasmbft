@@ -7,8 +7,8 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/airchains-network/wasmbft/abci/types"
-	cmtnet "github.com/airchains-network/wasmbft/libs/net"
+	"github.com/cometbft/cometbft/abci/types"
+	cmtnet "github.com/cometbft/cometbft/libs/net"
 )
 
 func main() {

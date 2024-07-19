@@ -10,18 +10,18 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	"github.com/airchains-network/wasmbft/internal/test"
-	"github.com/airchains-network/wasmbft/libs/log"
-	mpmocks "github.com/airchains-network/wasmbft/mempool/mocks"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	sm "github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/state/mocks"
-	"github.com/airchains-network/wasmbft/store"
-	"github.com/airchains-network/wasmbft/types"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/internal/test"
+	"github.com/cometbft/cometbft/libs/log"
+	mpmocks "github.com/cometbft/cometbft/mempool/mocks"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	sm "github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/state/mocks"
+	"github.com/cometbft/cometbft/store"
+	"github.com/cometbft/cometbft/types"
+	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 const validationTestsStopHeight int64 = 10

@@ -1,7 +1,7 @@
 package core
 
 import (
-	rpc "github.com/airchains-network/wasmbft/rpc/jsonrpc/server"
+	rpc "github.com/cometbft/cometbft/rpc/jsonrpc/server"
 )
 
 // TODO: better system than "unsafe" prefix

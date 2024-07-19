@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
-	"github.com/airchains-network/wasmbft/version"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
+	"github.com/cometbft/cometbft/version"
 	"github.com/stretchr/testify/require"
 )
 

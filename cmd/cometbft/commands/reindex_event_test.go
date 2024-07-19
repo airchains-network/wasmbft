@@ -11,13 +11,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abcitypes "github.com/airchains-network/wasmbft/abci/types"
-	cmtcfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/internal/test"
-	blockmocks "github.com/airchains-network/wasmbft/state/indexer/mocks"
-	"github.com/airchains-network/wasmbft/state/mocks"
-	txmocks "github.com/airchains-network/wasmbft/state/txindex/mocks"
-	"github.com/airchains-network/wasmbft/types"
+	abcitypes "github.com/cometbft/cometbft/abci/types"
+	cmtcfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/internal/test"
+	blockmocks "github.com/cometbft/cometbft/state/indexer/mocks"
+	"github.com/cometbft/cometbft/state/mocks"
+	txmocks "github.com/cometbft/cometbft/state/txindex/mocks"
+	"github.com/cometbft/cometbft/types"
 )
 
 const (

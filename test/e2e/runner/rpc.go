@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
-	"github.com/airchains-network/wasmbft/types"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	rpctypes "github.com/cometbft/cometbft/rpc/core/types"
+	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
+	"github.com/cometbft/cometbft/types"
 )
 
 // waitForHeight waits for the network to reach a certain height (or above),

@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/airchains-network/wasmbft/abci/example/kvstore"
-	nm "github.com/airchains-network/wasmbft/node"
-	rpctest "github.com/airchains-network/wasmbft/rpc/test"
+	"github.com/cometbft/cometbft/abci/example/kvstore"
+	nm "github.com/cometbft/cometbft/node"
+	rpctest "github.com/cometbft/cometbft/rpc/test"
 )
 
 var node *nm.Node

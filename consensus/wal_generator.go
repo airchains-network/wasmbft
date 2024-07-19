@@ -11,16 +11,16 @@ import (
 
 	db "github.com/cometbft/cometbft-db"
 
-	"github.com/airchains-network/wasmbft/abci/example/kvstore"
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/internal/test"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/privval"
-	"github.com/airchains-network/wasmbft/proxy"
-	sm "github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/store"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/abci/example/kvstore"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/internal/test"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/privval"
+	"github.com/cometbft/cometbft/proxy"
+	sm "github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/store"
+	"github.com/cometbft/cometbft/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

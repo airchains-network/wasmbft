@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // mempoolTx is an entry in the mempool

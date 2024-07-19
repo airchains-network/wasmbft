@@ -7,9 +7,9 @@ import (
 	"github.com/google/uuid"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/airchains-network/wasmbft/test/loadtime/payload"
-	"github.com/airchains-network/wasmbft/test/loadtime/report"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/test/loadtime/payload"
+	"github.com/cometbft/cometbft/test/loadtime/report"
+	"github.com/cometbft/cometbft/types"
 )
 
 type mockBlockStore struct {

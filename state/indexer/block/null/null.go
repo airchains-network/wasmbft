@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	"github.com/airchains-network/wasmbft/state/indexer"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/state/indexer"
+	"github.com/cometbft/cometbft/types"
 )
 
 var _ indexer.BlockIndexer = (*BlockerIndexer)(nil)

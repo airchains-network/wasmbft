@@ -1,7 +1,7 @@
 package blocksync
 
 import (
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 	"github.com/go-kit/kit/metrics"
 )
 

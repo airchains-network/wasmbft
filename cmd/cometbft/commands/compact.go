@@ -10,7 +10,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	"github.com/syndtr/goleveldb/leveldb/util"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 )
 
 var CompactGoLevelDBCmd = &cobra.Command{

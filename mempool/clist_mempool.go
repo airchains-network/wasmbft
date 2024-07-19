@@ -7,14 +7,14 @@ import (
 	"sync"
 	"sync/atomic"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/clist"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	"github.com/airchains-network/wasmbft/proxy"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/clist"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/cometbft/cometbft/proxy"
+	"github.com/cometbft/cometbft/types"
 )
 
 // CListMempool is an ordered in-memory pool for transactions before they are

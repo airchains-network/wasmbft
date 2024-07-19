@@ -2,8 +2,8 @@ package core
 
 import (
 	"encoding/json"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
-	tracksTypes "github.com/airchains-network/wasmbft/types/tracks"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	tracksTypes "github.com/cometbft/cometbft/types/tracks"
 	"strconv"
 )
 

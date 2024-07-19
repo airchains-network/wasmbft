@@ -1,11 +1,11 @@
 package core
 
 import (
-	cm "github.com/airchains-network/wasmbft/consensus"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
-	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
-	"github.com/airchains-network/wasmbft/types"
+	cm "github.com/cometbft/cometbft/consensus"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
+	ctypes "github.com/cometbft/cometbft/rpc/core/types"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // Validators gets the validator set at the given block height.

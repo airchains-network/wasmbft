@@ -15,15 +15,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/airchains-network/wasmbft/abci/example/kvstore"
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/crypto"
-	cryptoenc "github.com/airchains-network/wasmbft/crypto/encoding"
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/protoio"
-	cryptoproto "github.com/airchains-network/wasmbft/proto/tendermint/crypto"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/abci/example/kvstore"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/crypto"
+	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/protoio"
+	cryptoproto "github.com/cometbft/cometbft/proto/tendermint/crypto"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	"github.com/cometbft/cometbft/version"
 )
 
 const (

@@ -10,9 +10,9 @@ import (
 	"github.com/oasisprotocol/curve25519-voi/primitives/ed25519"
 	"github.com/oasisprotocol/curve25519-voi/primitives/ed25519/extra/cache"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	cmtjson "github.com/airchains-network/wasmbft/libs/json"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtjson "github.com/cometbft/cometbft/libs/json"
 )
 
 //-------------------------------------

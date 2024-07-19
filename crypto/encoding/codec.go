@@ -3,11 +3,11 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	"github.com/airchains-network/wasmbft/crypto/secp256k1"
-	"github.com/airchains-network/wasmbft/libs/json"
-	pc "github.com/airchains-network/wasmbft/proto/tendermint/crypto"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	"github.com/cometbft/cometbft/crypto/secp256k1"
+	"github.com/cometbft/cometbft/libs/json"
+	pc "github.com/cometbft/cometbft/proto/tendermint/crypto"
 )
 
 func init() {

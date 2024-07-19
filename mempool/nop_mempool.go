@@ -3,10 +3,10 @@ package mempool
 import (
 	"errors"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/libs/service"
-	"github.com/airchains-network/wasmbft/p2p"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/libs/service"
+	"github.com/cometbft/cometbft/p2p"
+	"github.com/cometbft/cometbft/types"
 )
 
 // NopMempool is a mempool that does nothing.

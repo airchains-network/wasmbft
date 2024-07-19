@@ -10,13 +10,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/bytes"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/p2p"
-	"github.com/airchains-network/wasmbft/privval"
-	"github.com/airchains-network/wasmbft/types"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/bytes"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/p2p"
+	"github.com/cometbft/cometbft/privval"
+	"github.com/cometbft/cometbft/types"
+	cmttime "github.com/cometbft/cometbft/types/time"
 )
 
 var (

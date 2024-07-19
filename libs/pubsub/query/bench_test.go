@@ -3,7 +3,7 @@ package query_test
 import (
 	"testing"
 
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
 )
 
 const testQuery = `tm.events.type='NewBlock' AND abci.account.name='Igor'`

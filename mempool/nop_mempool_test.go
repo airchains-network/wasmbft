@@ -3,7 +3,7 @@ package mempool
 import (
 	"testing"
 
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/assert"
 )
 

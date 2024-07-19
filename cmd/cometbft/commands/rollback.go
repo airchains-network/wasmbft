@@ -8,10 +8,10 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/os"
-	"github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/store"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/os"
+	"github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/store"
 )
 
 var removeBlock = false

@@ -1,7 +1,7 @@
 package version
 
 import (
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/version"
 )
 
 // TODO: eliminate this after some version refactor

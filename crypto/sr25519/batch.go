@@ -5,7 +5,7 @@ import (
 
 	"github.com/oasisprotocol/curve25519-voi/primitives/sr25519"
 
-	"github.com/airchains-network/wasmbft/crypto"
+	"github.com/cometbft/cometbft/crypto"
 )
 
 var _ crypto.BatchVerifier = &BatchVerifier{}

@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 )
 
 type logger interface {

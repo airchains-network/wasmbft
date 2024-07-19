@@ -16,13 +16,13 @@ import (
 
 	"github.com/minio/highwayhash"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/libs/service"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	"github.com/airchains-network/wasmbft/p2p"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/libs/service"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/cometbft/cometbft/p2p"
 )
 
 const (

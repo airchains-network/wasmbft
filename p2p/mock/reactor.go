@@ -1,9 +1,9 @@
 package mock
 
 import (
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/p2p"
-	"github.com/airchains-network/wasmbft/p2p/conn"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/p2p"
+	"github.com/cometbft/cometbft/p2p/conn"
 )
 
 type Reactor struct {

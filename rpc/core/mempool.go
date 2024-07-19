@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	mempl "github.com/airchains-network/wasmbft/mempool"
-	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	mempl "github.com/cometbft/cometbft/mempool"
+	ctypes "github.com/cometbft/cometbft/rpc/core/types"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 //-----------------------------------------------------------------------------

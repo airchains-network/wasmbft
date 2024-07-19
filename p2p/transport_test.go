@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	"github.com/airchains-network/wasmbft/libs/protoio"
-	"github.com/airchains-network/wasmbft/p2p/conn"
-	tmp2p "github.com/airchains-network/wasmbft/proto/tendermint/p2p"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	"github.com/cometbft/cometbft/libs/protoio"
+	"github.com/cometbft/cometbft/p2p/conn"
+	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
 )
 
 var defaultNodeName = "host_peer"

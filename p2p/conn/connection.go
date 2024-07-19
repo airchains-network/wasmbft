@@ -14,15 +14,15 @@ import (
 
 	"github.com/cosmos/gogoproto/proto"
 
-	"github.com/airchains-network/wasmbft/config"
-	flow "github.com/airchains-network/wasmbft/libs/flowrate"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
-	"github.com/airchains-network/wasmbft/libs/protoio"
-	"github.com/airchains-network/wasmbft/libs/service"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	"github.com/airchains-network/wasmbft/libs/timer"
-	tmp2p "github.com/airchains-network/wasmbft/proto/tendermint/p2p"
+	"github.com/cometbft/cometbft/config"
+	flow "github.com/cometbft/cometbft/libs/flowrate"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
+	"github.com/cometbft/cometbft/libs/protoio"
+	"github.com/cometbft/cometbft/libs/service"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/cometbft/cometbft/libs/timer"
+	tmp2p "github.com/cometbft/cometbft/proto/tendermint/p2p"
 )
 
 const (

@@ -16,16 +16,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/merkle"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	"github.com/airchains-network/wasmbft/libs/bits"
-	"github.com/airchains-network/wasmbft/libs/bytes"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
-	cmttime "github.com/airchains-network/wasmbft/types/time"
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/merkle"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/libs/bits"
+	"github.com/cometbft/cometbft/libs/bytes"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
+	cmttime "github.com/cometbft/cometbft/types/time"
+	"github.com/cometbft/cometbft/version"
 )
 
 func TestMain(m *testing.M) {

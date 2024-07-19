@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
 )
 
 func TestWriteFileAtomic(t *testing.T) {

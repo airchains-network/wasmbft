@@ -9,8 +9,8 @@ import (
 	"github.com/gofrs/uuid"
 	"gonum.org/v1/gonum/stat"
 
-	"github.com/airchains-network/wasmbft/test/loadtime/payload"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/test/loadtime/payload"
+	"github.com/cometbft/cometbft/types"
 )
 
 // BlockStore defines the set of methods needed by the report generator from

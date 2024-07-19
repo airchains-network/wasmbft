@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
+	abci "github.com/cometbft/cometbft/abci/types"
 )
 
 const (

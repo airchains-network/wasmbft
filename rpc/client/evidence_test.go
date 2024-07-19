@@ -9,17 +9,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	cryptoenc "github.com/airchains-network/wasmbft/crypto/encoding"
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	"github.com/airchains-network/wasmbft/internal/test"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/privval"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	"github.com/airchains-network/wasmbft/rpc/client"
-	rpctest "github.com/airchains-network/wasmbft/rpc/test"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	cryptoenc "github.com/cometbft/cometbft/crypto/encoding"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/internal/test"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/privval"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	"github.com/cometbft/cometbft/rpc/client"
+	rpctest "github.com/cometbft/cometbft/rpc/test"
+	"github.com/cometbft/cometbft/types"
 )
 
 // For some reason the empty node used in tests has a time of

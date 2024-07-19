@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	cmtpubsub "github.com/airchains-network/wasmbft/libs/pubsub"
-	cmtquery "github.com/airchains-network/wasmbft/libs/pubsub/query"
-	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
+	cmtpubsub "github.com/cometbft/cometbft/libs/pubsub"
+	cmtquery "github.com/cometbft/cometbft/libs/pubsub/query"
+	ctypes "github.com/cometbft/cometbft/rpc/core/types"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
 )
 
 const (

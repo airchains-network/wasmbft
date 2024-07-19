@@ -8,12 +8,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/service"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/service"
 
-	abcicli "github.com/airchains-network/wasmbft/abci/client"
-	abciserver "github.com/airchains-network/wasmbft/abci/server"
-	"github.com/airchains-network/wasmbft/abci/types"
+	abcicli "github.com/cometbft/cometbft/abci/client"
+	abciserver "github.com/cometbft/cometbft/abci/server"
+	"github.com/cometbft/cometbft/abci/types"
 )
 
 const (

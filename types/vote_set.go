@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/airchains-network/wasmbft/libs/bits"
-	cmtjson "github.com/airchains-network/wasmbft/libs/json"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/cometbft/cometbft/libs/bits"
+	cmtjson "github.com/cometbft/cometbft/libs/json"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 )
 
 const (

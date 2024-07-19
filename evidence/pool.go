@@ -13,11 +13,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	clist "github.com/airchains-network/wasmbft/libs/clist"
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
-	sm "github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/types"
+	clist "github.com/cometbft/cometbft/libs/clist"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	sm "github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/types"
 )
 
 const (

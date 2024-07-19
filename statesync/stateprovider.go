@@ -8,18 +8,18 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	"github.com/airchains-network/wasmbft/light"
-	lightprovider "github.com/airchains-network/wasmbft/light/provider"
-	lighthttp "github.com/airchains-network/wasmbft/light/provider/http"
-	lightrpc "github.com/airchains-network/wasmbft/light/rpc"
-	lightdb "github.com/airchains-network/wasmbft/light/store/db"
-	cmtstate "github.com/airchains-network/wasmbft/proto/tendermint/state"
-	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
-	sm "github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/types"
-	"github.com/airchains-network/wasmbft/version"
+	"github.com/cometbft/cometbft/libs/log"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	"github.com/cometbft/cometbft/light"
+	lightprovider "github.com/cometbft/cometbft/light/provider"
+	lighthttp "github.com/cometbft/cometbft/light/provider/http"
+	lightrpc "github.com/cometbft/cometbft/light/rpc"
+	lightdb "github.com/cometbft/cometbft/light/store/db"
+	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
+	sm "github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/types"
+	"github.com/cometbft/cometbft/version"
 )
 
 //go:generate ../scripts/mockery_generate.sh StateProvider

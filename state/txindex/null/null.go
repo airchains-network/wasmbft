@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	"github.com/airchains-network/wasmbft/state/txindex"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/state/txindex"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

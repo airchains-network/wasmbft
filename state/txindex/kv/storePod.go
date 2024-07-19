@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/state/txindex"
-	"github.com/airchains-network/wasmbft/types"
-	tracksTypes "github.com/airchains-network/wasmbft/types/tracks"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/state/txindex"
+	"github.com/cometbft/cometbft/types"
+	tracksTypes "github.com/cometbft/cometbft/types/tracks"
 	"strconv"
 	"strings"
 )
@@ -26,7 +26,7 @@ func StorePod(txi *TxIndex, b *txindex.Batch) error {
 	storeBatch := txi.store.NewBatch()
 	defer storeBatch.Close()
 	if len(b.Ops) == 0 {
-		fmt.Println("no operations provided")
+		txi.log.Info("no operations provided", "module", "txindex")
 		return nil
 	}
 
@@ -67,19 +67,6 @@ func StorePod(txi *TxIndex, b *txindex.Batch) error {
 						toBalance = string(attribute.Value)
 					}
 				}
-
-				// in case of multi send, the sender is not present in the transfer event, so get it from message
-				//if sender == "" {
-				//	for _, event_internal := range events {
-				//		if event_internal.Type == "message" {
-				//			for _, internal_attribute := range event_internal.Attributes {
-				//				if string(internal_attribute.Key) == "sender" {
-				//					sender = string(internal_attribute.Value)
-				//				}
-				//			}
-				//		}
-				//	}
-				//}
 
 				// Retrieve the current nonce for the sender
 				nonce, err := GetNonce(txi, sender)
@@ -126,7 +113,7 @@ func StorePod(txi *TxIndex, b *txindex.Batch) error {
 		return fmt.Errorf("failed to retrieve current pod: %w", err)
 	}
 
-	fmt.Println("podNumber:", podNumber, "txLen:", len(currentPod))
+	txi.log.Info("processing pod", "podNumber", podNumber, "txLen", len(currentPod), "module", "txindex")
 
 	// Process transactions in txArray for pods storage
 	for len(txArray) > 0 {

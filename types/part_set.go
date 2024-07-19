@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/airchains-network/wasmbft/crypto/merkle"
-	"github.com/airchains-network/wasmbft/libs/bits"
-	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
-	cmtjson "github.com/airchains-network/wasmbft/libs/json"
-	cmtmath "github.com/airchains-network/wasmbft/libs/math"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	cmtproto "github.com/airchains-network/wasmbft/proto/tendermint/types"
+	"github.com/cometbft/cometbft/crypto/merkle"
+	"github.com/cometbft/cometbft/libs/bits"
+	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
+	cmtjson "github.com/cometbft/cometbft/libs/json"
+	cmtmath "github.com/cometbft/cometbft/libs/math"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 )
 
 var (

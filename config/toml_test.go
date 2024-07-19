@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/internal/test"
+	"github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/internal/test"
 )
 
 func ensureFiles(t *testing.T, rootDir string, files ...string) {

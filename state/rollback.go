@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	cmtstate "github.com/airchains-network/wasmbft/proto/tendermint/state"
-	cmtversion "github.com/airchains-network/wasmbft/proto/tendermint/version"
-	"github.com/airchains-network/wasmbft/version"
+	cmtstate "github.com/cometbft/cometbft/proto/tendermint/state"
+	cmtversion "github.com/cometbft/cometbft/proto/tendermint/version"
+	"github.com/cometbft/cometbft/version"
 )
 
 // Rollback overwrites the current CometBFT state (height n) with the most

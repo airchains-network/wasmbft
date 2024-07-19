@@ -5,11 +5,11 @@ package tests
 import (
 	"testing"
 
-	abciclient "github.com/airchains-network/wasmbft/abci/client"
-	"github.com/airchains-network/wasmbft/abci/example/kvstore"
-	"github.com/airchains-network/wasmbft/config"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
-	mempool "github.com/airchains-network/wasmbft/mempool"
+	abciclient "github.com/cometbft/cometbft/abci/client"
+	"github.com/cometbft/cometbft/abci/example/kvstore"
+	"github.com/cometbft/cometbft/config"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
+	mempool "github.com/cometbft/cometbft/mempool"
 )
 
 func FuzzMempool(f *testing.F) {

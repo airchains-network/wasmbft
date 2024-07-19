@@ -10,9 +10,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/libs/cli"
-	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/libs/cli"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 )
 
 var dumpCmd = &cobra.Command{

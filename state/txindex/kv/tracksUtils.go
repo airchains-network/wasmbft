@@ -17,17 +17,17 @@ func InitiateDatabaseForPods(txi *TxIndex) error {
 
 	err := txi.store.Set([]byte(CounterTxsKey), []byte("0"))
 	if err != nil {
-		fmt.Println("Error initializing countTxs:", err)
+		txi.log.Error("Error initializing countTxs", "err", err, "module", "txindex")
 		return err
 	}
 
 	err = txi.store.Set([]byte(CounterPodsKey), []byte("1"))
 	if err != nil {
-		fmt.Println("Error initializing countPods:", err)
+		txi.log.Error("Error initializing countPods", "err", err, "module", "txindex")
 		return err
 	}
 
-	fmt.Println("Initialized database for pods")
+	txi.log.Info("Initialized database for pods", "module", "txindex")
 
 	return nil
 
@@ -41,7 +41,7 @@ func IncrementTxCount(txi *TxIndex) error {
 	count++
 	err = txi.store.Set([]byte(CounterTxsKey), []byte(strconv.Itoa(count)))
 	if err != nil {
-		fmt.Println("Error incrementing countTxs:", err)
+		txi.log.Error("Error incrementing countTxs", "err", err, "module", "txindex")
 		return err
 	}
 	return nil
@@ -81,7 +81,7 @@ func IncrementPodCount(txi *TxIndex) error {
 	count++
 	err = txi.store.Set([]byte(CounterPodsKey), []byte(strconv.Itoa(count)))
 	if err != nil {
-		fmt.Println("Error incrementing countPods:", err)
+		txi.log.Error("Error incrementing countPods", "err", err, "module", "txindex")
 		return err
 	}
 	return nil

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/template"
 
-	cmtos "github.com/airchains-network/wasmbft/libs/os"
+	cmtos "github.com/cometbft/cometbft/libs/os"
 )
 
 // DefaultDirPerm is the default permissions used when creating directories.

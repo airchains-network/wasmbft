@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/airchains-network/wasmbft/libs/pubsub/query/syntax"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/libs/pubsub/query/syntax"
+	"github.com/cometbft/cometbft/types"
 )
 
 // QueryRanges defines a mapping between a composite event key and a QueryRange.

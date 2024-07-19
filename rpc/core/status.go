@@ -3,11 +3,11 @@ package core
 import (
 	"time"
 
-	cmtbytes "github.com/airchains-network/wasmbft/libs/bytes"
-	"github.com/airchains-network/wasmbft/p2p"
-	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
-	"github.com/airchains-network/wasmbft/types"
+	cmtbytes "github.com/cometbft/cometbft/libs/bytes"
+	"github.com/cometbft/cometbft/p2p"
+	ctypes "github.com/cometbft/cometbft/rpc/core/types"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // Status returns CometBFT status including node info, pubkey, latest block

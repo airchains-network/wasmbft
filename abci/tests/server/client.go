@@ -6,9 +6,9 @@ import (
 	"errors"
 	"fmt"
 
-	abcicli "github.com/airchains-network/wasmbft/abci/client"
-	"github.com/airchains-network/wasmbft/abci/types"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
+	abcicli "github.com/cometbft/cometbft/abci/client"
+	"github.com/cometbft/cometbft/abci/types"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
 )
 
 func InitChain(ctx context.Context, client abcicli.Client) error {

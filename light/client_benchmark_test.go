@@ -7,11 +7,11 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/light"
-	"github.com/airchains-network/wasmbft/light/provider"
-	mockp "github.com/airchains-network/wasmbft/light/provider/mock"
-	dbs "github.com/airchains-network/wasmbft/light/store/db"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/light"
+	"github.com/cometbft/cometbft/light/provider"
+	mockp "github.com/cometbft/cometbft/light/provider/mock"
+	dbs "github.com/cometbft/cometbft/light/store/db"
 )
 
 // NOTE: block is produced every minute. Make sure the verification time

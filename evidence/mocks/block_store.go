@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	types "github.com/airchains-network/wasmbft/types"
+	types "github.com/cometbft/cometbft/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

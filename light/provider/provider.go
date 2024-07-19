@@ -3,7 +3,7 @@ package provider
 import (
 	"context"
 
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // Provider provides information for the light client to sync (verification

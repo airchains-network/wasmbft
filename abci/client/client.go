@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/libs/service"
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	"github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/libs/service"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
 )
 
 const (

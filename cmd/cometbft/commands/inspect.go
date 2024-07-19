@@ -8,12 +8,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/airchains-network/wasmbft/config"
-	"github.com/airchains-network/wasmbft/inspect"
-	"github.com/airchains-network/wasmbft/state"
-	"github.com/airchains-network/wasmbft/state/indexer/block"
-	"github.com/airchains-network/wasmbft/store"
-	"github.com/airchains-network/wasmbft/types"
+	cfg "github.com/cometbft/cometbft/config"
+	"github.com/cometbft/cometbft/inspect"
+	"github.com/cometbft/cometbft/state"
+	"github.com/cometbft/cometbft/state/indexer/block"
+	"github.com/cometbft/cometbft/store"
+	"github.com/cometbft/cometbft/types"
 )
 
 // InspectCmd is the command for starting an inspect server.

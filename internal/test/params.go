@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // ConsensusParams returns a default set of ConsensusParams that are suitable

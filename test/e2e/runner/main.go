@@ -10,11 +10,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/airchains-network/wasmbft/libs/log"
-	e2e "github.com/airchains-network/wasmbft/test/e2e/pkg"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra/digitalocean"
-	"github.com/airchains-network/wasmbft/test/e2e/pkg/infra/docker"
+	"github.com/cometbft/cometbft/libs/log"
+	e2e "github.com/cometbft/cometbft/test/e2e/pkg"
+	"github.com/cometbft/cometbft/test/e2e/pkg/infra"
+	"github.com/cometbft/cometbft/test/e2e/pkg/infra/digitalocean"
+	"github.com/cometbft/cometbft/test/e2e/pkg/infra/docker"
 )
 
 const randomSeed = 2308084734268

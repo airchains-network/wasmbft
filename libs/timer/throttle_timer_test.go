@@ -8,7 +8,7 @@ import (
 
 	asrt "github.com/stretchr/testify/assert"
 
-	cmtsync "github.com/airchains-network/wasmbft/libs/sync"
+	cmtsync "github.com/cometbft/cometbft/libs/sync"
 )
 
 type thCounter struct {

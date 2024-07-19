@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/airchains-network/wasmbft/libs/log"
+	"github.com/cometbft/cometbft/libs/log"
 )
 
 const (

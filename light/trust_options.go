@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
+	"github.com/cometbft/cometbft/crypto/tmhash"
 )
 
 // TrustOptions are the trust parameters needed when a new light client

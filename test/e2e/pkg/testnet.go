@@ -14,10 +14,10 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/airchains-network/wasmbft/crypto"
-	"github.com/airchains-network/wasmbft/crypto/ed25519"
-	"github.com/airchains-network/wasmbft/crypto/secp256k1"
-	rpchttp "github.com/airchains-network/wasmbft/rpc/client/http"
+	"github.com/cometbft/cometbft/crypto"
+	"github.com/cometbft/cometbft/crypto/ed25519"
+	"github.com/cometbft/cometbft/crypto/secp256k1"
+	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 
 	_ "embed"
 )

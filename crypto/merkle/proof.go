@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/airchains-network/wasmbft/crypto/tmhash"
-	cmtcrypto "github.com/airchains-network/wasmbft/proto/tendermint/crypto"
+	"github.com/cometbft/cometbft/crypto/tmhash"
+	cmtcrypto "github.com/cometbft/cometbft/proto/tendermint/crypto"
 )
 
 const (

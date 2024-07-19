@@ -10,17 +10,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/libs/pubsub"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query/syntax"
+	"github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/libs/pubsub"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/libs/pubsub/query/syntax"
 )
 
 var _ pubsub.Query = (*query.Query)(nil)
 
 // Example events from the OpenAPI documentation:
 //
-//	https://github.com/airchains-network/wasmbft/blob/master/rpc/openapi/openapi.yaml
+//	https://github.com/cometbft/cometbft/blob/master/rpc/openapi/openapi.yaml
 //
 // Redactions:
 //

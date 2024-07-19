@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/airchains-network/wasmbft/abci/types"
-	cryptoencoding "github.com/airchains-network/wasmbft/crypto/encoding"
-	cmtrand "github.com/airchains-network/wasmbft/libs/rand"
-	"github.com/airchains-network/wasmbft/proto/tendermint/crypto"
+	"github.com/cometbft/cometbft/abci/types"
+	cryptoencoding "github.com/cometbft/cometbft/crypto/encoding"
+	cmtrand "github.com/cometbft/cometbft/libs/rand"
+	"github.com/cometbft/cometbft/proto/tendermint/crypto"
 )
 
 // RandVal creates one random validator, with a key derived

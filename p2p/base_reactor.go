@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/airchains-network/wasmbft/libs/service"
-	"github.com/airchains-network/wasmbft/p2p/conn"
+	"github.com/cometbft/cometbft/libs/service"
+	"github.com/cometbft/cometbft/p2p/conn"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

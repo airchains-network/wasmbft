@@ -18,13 +18,13 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/airchains-network/wasmbft/libs/bytes"
-	"github.com/airchains-network/wasmbft/libs/service"
-	"github.com/airchains-network/wasmbft/rpc/client"
-	"github.com/airchains-network/wasmbft/rpc/core"
-	ctypes "github.com/airchains-network/wasmbft/rpc/core/types"
-	rpctypes "github.com/airchains-network/wasmbft/rpc/jsonrpc/types"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/libs/bytes"
+	"github.com/cometbft/cometbft/libs/service"
+	"github.com/cometbft/cometbft/rpc/client"
+	"github.com/cometbft/cometbft/rpc/core"
+	ctypes "github.com/cometbft/cometbft/rpc/core/types"
+	rpctypes "github.com/cometbft/cometbft/rpc/jsonrpc/types"
+	"github.com/cometbft/cometbft/types"
 )
 
 // Client wraps arbitrary implementations of the various interfaces.

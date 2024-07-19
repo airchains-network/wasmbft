@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/airchains-network/wasmbft/abci/example/kvstore"
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	"github.com/airchains-network/wasmbft/proxy"
-	"github.com/airchains-network/wasmbft/types"
+	"github.com/cometbft/cometbft/abci/example/kvstore"
+	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/cometbft/cometbft/proxy"
+	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/require"
 )
 

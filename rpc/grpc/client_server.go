@@ -6,8 +6,8 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	cmtnet "github.com/airchains-network/wasmbft/libs/net"
-	"github.com/airchains-network/wasmbft/rpc/core"
+	cmtnet "github.com/cometbft/cometbft/libs/net"
+	"github.com/cometbft/cometbft/rpc/core"
 )
 
 // Config is an gRPC server configuration.

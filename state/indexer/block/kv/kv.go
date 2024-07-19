@@ -14,13 +14,13 @@ import (
 
 	dbm "github.com/cometbft/cometbft-db"
 
-	abci "github.com/airchains-network/wasmbft/abci/types"
-	idxutil "github.com/airchains-network/wasmbft/internal/indexer"
-	"github.com/airchains-network/wasmbft/libs/log"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query"
-	"github.com/airchains-network/wasmbft/libs/pubsub/query/syntax"
-	"github.com/airchains-network/wasmbft/state/indexer"
-	"github.com/airchains-network/wasmbft/types"
+	abci "github.com/cometbft/cometbft/abci/types"
+	idxutil "github.com/cometbft/cometbft/internal/indexer"
+	"github.com/cometbft/cometbft/libs/log"
+	"github.com/cometbft/cometbft/libs/pubsub/query"
+	"github.com/cometbft/cometbft/libs/pubsub/query/syntax"
+	"github.com/cometbft/cometbft/state/indexer"
+	"github.com/cometbft/cometbft/types"
 )
 
 var _ indexer.BlockIndexer = (*BlockerIndexer)(nil)

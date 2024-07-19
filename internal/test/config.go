@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/airchains-network/wasmbft/config"
-	cmtos "github.com/airchains-network/wasmbft/libs/os"
+	"github.com/cometbft/cometbft/config"
+	cmtos "github.com/cometbft/cometbft/libs/os"
 )
 
 func ResetTestRoot(testName string) *config.Config {
